@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var navBar: UINavigationBar!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var paddinglabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navBar.barTintColor = UIColor.greenColor()
-        label.backgroundColor = UIColor.greenColor()
+        paddinglabel.backgroundColor = UIColor.greenColor()
         var x = 0
         x = 0
         if(x != 0){
