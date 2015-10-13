@@ -411,6 +411,7 @@
 				2EA669A01BC3453300364B08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EA669A11BC3453300364B08 /* Build configuration list for PBXNativeTarget "HexoplexTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				2EA669A31BC3453300364B08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
