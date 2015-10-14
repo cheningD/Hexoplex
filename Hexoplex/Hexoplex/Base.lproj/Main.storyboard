@@ -4,10 +4,62 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings-->
+        <scene sceneID="DwP-Oe-LIK">
+            <objects>
+                <viewController title="Settings" id="9rN-72-ZBU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lbf-wL-WYK"/>
+                        <viewControllerLayoutGuide type="bottom" id="nIV-dJ-DGg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m2R-hp-BIw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBk-Ct-HVD">
+                                <rect key="frame" x="-2" y="20" width="416" height="44"/>
+                                <items>
+                                    <navigationItem title="Hexoplex" id="nwK-83-NGz"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settingsNav" translatesAutoresizingMaskIntoConstraints="NO" id="cI1-D0-SyI">
+                                <rect key="frame" x="-17" y="532" width="462" height="389"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyj-uU-DWF">
+                                <rect key="frame" x="278" y="678" width="129" height="58"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IeK-0v-iBw" kind="popoverPresentation" popoverAnchorView="Lyj-uU-DWF" id="kAn-pU-9Oo">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jk-St-PHP">
+                                <rect key="frame" x="128" y="678" width="129" height="58"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="6jk-St-PHP" id="ovN-Vk-Fd6">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10980392156862745" green="0.33333333333333331" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jmm-P1-sSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112" y="482"/>
+        </scene>
+        <!--Statistis-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hexoplex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Statistis" id="BYZ-38-t0r" customClass="ViewController" customModule="Hexoplex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,14 +68,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navBar" translatesAutoresizingMaskIntoConstraints="NO" id="Xnu-LG-8rn">
+                                <rect key="frame" x="-17" y="532" width="462" height="389"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lungs_icon" translatesAutoresizingMaskIntoConstraints="NO" id="F9T-nw-OxS">
-                                <rect key="frame" x="146" y="439" width="120" height="95"/>
+                                <rect key="frame" x="146" y="407" width="120" height="95"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart_icon" translatesAutoresizingMaskIntoConstraints="NO" id="NKK-Zb-Lge">
-                                <rect key="frame" x="145" y="201" width="122" height="108"/>
+                                <rect key="frame" x="145" y="169" width="122" height="108"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="half_cirlce" translatesAutoresizingMaskIntoConstraints="NO" id="ohT-KZ-AIy">
-                                <rect key="frame" x="86" y="371" width="240" height="251"/>
+                                <rect key="frame" x="85" y="339" width="240" height="251"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MiL-gj-gBu">
                                 <rect key="frame" x="-2" y="20" width="416" height="44"/>
@@ -39,49 +94,127 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="half_cirlce" translatesAutoresizingMaskIntoConstraints="NO" id="hNP-iv-L5Q">
-                                <rect key="frame" x="86" y="134" width="240" height="251"/>
+                                <rect key="frame" x="86" y="102" width="240" height="251"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60 BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDz-1N-SBY">
-                                <rect key="frame" x="154" y="305" width="104" height="43"/>
+                                <rect key="frame" x="154" y="273" width="104" height="43"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.70980392156862748" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="17 BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W95-r2-Mqf">
-                                <rect key="frame" x="154" y="549" width="104" height="43"/>
+                                <rect key="frame" x="153" y="517" width="104" height="43"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
                                 <color key="textColor" red="0.41568627450980394" green="0.70980392156862748" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Oj-rb-b59">
-                                <rect key="frame" x="187" y="679" width="39" height="37"/>
-                            </pageControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="LSk-gR-yH7">
-                                <rect key="frame" x="165" y="620" width="85" height="63"/>
+                                <rect key="frame" x="162" y="588" width="85" height="63"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navBar" translatesAutoresizingMaskIntoConstraints="NO" id="Xnu-LG-8rn">
-                                <rect key="frame" x="-16" y="-83" width="462" height="389"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-nt-UC7">
+                                <rect key="frame" x="268" y="680" width="137" height="56"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IeK-0v-iBw" kind="popoverPresentation" popoverAnchorView="yfb-nt-UC7" id="pk6-Da-6ur">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUg-S7-d7R">
+                                <rect key="frame" x="4" y="680" width="137" height="56"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9rN-72-ZBU" kind="popoverPresentation" popoverAnchorView="bUg-S7-d7R" id="IsH-7Q-6EK">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.41164679276315752" blue="0.64584189967105265" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="BeathMonitor" destination="ohT-KZ-AIy" id="zOk-2g-DyM"/>
+                        <outlet property="exerciseButton" destination="yfb-nt-UC7" id="0YM-6O-3xC"/>
                         <outlet property="heartMonitor" destination="hNP-iv-L5Q" id="1La-0I-Chg"/>
                         <outlet property="navBar" destination="MiL-gj-gBu" id="pdP-b1-bgR"/>
                         <outlet property="paddinglabel" destination="g3k-kJ-k75" id="0rf-7N-Q3R"/>
+                        <outlet property="settingsButton" destination="bUg-S7-d7R" id="DPu-PR-BxR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="482"/>
+            <point key="canvasLocation" x="467" y="482"/>
+        </scene>
+        <!--Exercises-->
+        <scene sceneID="sKG-Nt-h8J">
+            <objects>
+                <viewController title="Exercises" id="IeK-0v-iBw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xWF-UM-TgE"/>
+                        <viewControllerLayoutGuide type="bottom" id="KfI-yI-bDq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oxM-FD-C9C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0l-eE-Qxs">
+                                <rect key="frame" x="-1" y="20" width="416" height="44"/>
+                                <items>
+                                    <navigationItem title="Hexoplex" id="mdJ-tC-Bg3"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="exerciseNav" translatesAutoresizingMaskIntoConstraints="NO" id="W1t-Uv-mJN">
+                                <rect key="frame" x="-17" y="531" width="462" height="389"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzO-WC-gnk">
+                                <rect key="frame" x="153" y="678" width="129" height="58"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="CzO-WC-gnk" id="79o-fJ-VDE">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxY-7N-H9f">
+                                <rect key="frame" x="7" y="677" width="129" height="58"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9rN-72-ZBU" kind="popoverPresentation" popoverAnchorView="dxY-7N-H9f" id="rHX-Nc-vs8">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10980392156862745" green="0.33333333333333331" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6JY-kj-egG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021" y="482"/>
         </scene>
     </scenes>
     <resources>
         <image name="check" width="300" height="300"/>
+        <image name="exerciseNav" width="504" height="504"/>
         <image name="half_cirlce" width="1400" height="1400"/>
         <image name="heart_icon" width="512" height="512"/>
         <image name="lungs_icon" width="552" height="594"/>
         <image name="navBar" width="504" height="504"/>
+        <image name="settingsNav" width="504" height="504"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rHX-Nc-vs8"/>
+        <segue reference="pk6-Da-6ur"/>
+        <segue reference="79o-fJ-VDE"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -12,8 +12,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var paddinglabel: UILabel!
-    @IBOutlet weak var heartMonitor: UIImageView!
     
+    //Heart and breathing rate dials
+    @IBOutlet weak var heartMonitor: UIImageView!
+    @IBOutlet weak var BeathMonitor: UIImageView!
+    
+    //Navigation buttons at bottom of screen
+    @IBOutlet weak var exerciseButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
     
     
     override func viewDidLoad() {
