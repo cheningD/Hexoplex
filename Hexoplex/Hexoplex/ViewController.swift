@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var paddinglabel: UILabel!
+    @IBOutlet weak var heartMonitor: UIImageView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
             navBar.backgroundColor = UIColor.redColor()
         }
         // Do any additional setup after loading the view, typically from a nib.
-        println("test")
+        
     }
 
     override func didReceiveMemoryWarning() {
