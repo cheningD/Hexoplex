@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GaugeKit
 
 class ViewController: UIViewController {
     
@@ -17,9 +18,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var heartMonitor: UIImageView!
     @IBOutlet weak var BeathMonitor: UIImageView!
     
+    @IBOutlet var lung_gauge: Gauge!
+    @IBOutlet var heart_gauge: Gauge!
     //Navigation buttons at bottom of screen
     @IBOutlet weak var exerciseButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
+    
+    @IBAction func sliderChnaged(sender: UISlider) {
+        
+        heart_gauge.rate = CGFloat(sender.value * 3)
+        lung_gauge.rate = CGFloat(sender.value * 3)
+    }
     
     
     override func viewDidLoad() {
