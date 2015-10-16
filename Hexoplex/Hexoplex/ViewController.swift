@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var lung_gauge: Gauge!
     @IBOutlet var heart_gauge: Gauge!
+    
     //Navigation buttons at bottom of screen
     @IBOutlet weak var exerciseButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
