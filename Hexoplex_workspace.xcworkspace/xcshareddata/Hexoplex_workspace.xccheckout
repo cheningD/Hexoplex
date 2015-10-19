@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E020547A-C4BD-431C-BDEE-5B8ED43FD132</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hexoplex_workspace</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8DD3B6949676508BB111A1E14BA93611807F138D</key>
+		<string>https://github.com/cheningD/Hexoplex.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hexoplex_workspace.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8DD3B6949676508BB111A1E14BA93611807F138D</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cheningD/Hexoplex.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8DD3B6949676508BB111A1E14BA93611807F138D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8DD3B6949676508BB111A1E14BA93611807F138D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hexoplex</string>
+		</dict>
+	</array>
+</dict>
+</plist>

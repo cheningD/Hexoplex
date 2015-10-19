@@ -14,28 +14,41 @@ class ViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var paddinglabel: UILabel!
     
-    //Heart and breathing rate dials
+    //Text below heart and lung gauges
+    @IBOutlet weak var heartText: UILabel!
+    @IBOutlet weak var lungText: UILabel!
+    
+    
+    
+    //Heart and breathing rate gaugess
+    
+    @IBOutlet var heart_gauge: Gauge!
     @IBOutlet weak var heartMonitor: UIImageView!
-    @IBOutlet weak var BeathMonitor: UIImageView!
+    @IBAction func heartSlider(sender: UISlider) {
+        heart_gauge.rate = CGFloat(sender.value)
+        var heartString = Int(sender.value)
+        self.heartText.text = "\(heartString) BPM"
+    }
     
     @IBOutlet var lung_gauge: Gauge!
-    @IBOutlet var heart_gauge: Gauge!
+    @IBOutlet weak var BeathMonitor: UIImageView!
+    @IBAction func LungSlider(sender: UISlider) {
+        lung_gauge.rate = CGFloat(sender.value)
+        var lungString = Int(sender.value)
+        self.lungText.text = "\(lungString) BPM"
+    }
     
+    
+
     //Navigation buttons at bottom of screen
     @IBOutlet weak var exerciseButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     
-    @IBAction func sliderChnaged(sender: UISlider) {
-        
-        heart_gauge.rate = CGFloat(sender.value * 3)
-        lung_gauge.rate = CGFloat(sender.value * 3)
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navBar.barTintColor = UIColor.greenColor()
-        paddinglabel.backgroundColor = UIColor.greenColor()
+        navBar.barTintColor = UIColor(red: 46/255, green: 207/255, blue: 102/255, alpha: 1)
+        paddinglabel.backgroundColor = UIColor(red: 46/255, green: 207/255, blue: 102/255, alpha: 1)
         var x = 0
         x = 0
         if(x != 0){

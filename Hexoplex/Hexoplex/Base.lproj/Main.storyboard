@@ -68,10 +68,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navBar" translatesAutoresizingMaskIntoConstraints="NO" id="Xnu-LG-8rn">
-                                <rect key="frame" x="-17" y="532" width="462" height="389"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lungs_icon" translatesAutoresizingMaskIntoConstraints="NO" id="F9T-nw-OxS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lungsNew" translatesAutoresizingMaskIntoConstraints="NO" id="F9T-nw-OxS">
                                 <rect key="frame" x="146" y="407" width="121" height="110"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart_icon" translatesAutoresizingMaskIntoConstraints="NO" id="NKK-Zb-Lge">
@@ -90,16 +87,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60 BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDz-1N-SBY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDz-1N-SBY">
                                 <rect key="frame" x="154" y="273" width="104" height="43"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <color key="textColor" red="0.41568627450980394" green="0.70980392156862748" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.36078431372549019" green="0.792156862745098" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="17 BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W95-r2-Mqf">
-                                <rect key="frame" x="153" y="517" width="104" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W95-r2-Mqf">
+                                <rect key="frame" x="153" y="505" width="104" height="43"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <color key="textColor" red="0.41568627450980394" green="0.70980392156862748" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.34901960784313724" green="0.7686274509803922" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-nt-UC7">
@@ -125,7 +122,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dx-53-3er" customClass="Gauge" customModule="GaugeKit">
-                                <rect key="frame" x="85" y="123" width="242" height="237"/>
+                                <rect key="frame" x="85" y="110" width="242" height="237"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rate">
@@ -140,21 +137,25 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="gaugeTypeInt">
                                         <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                        <color key="value" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                        <real key="value" value="3"/>
+                                        <real key="value" value="200"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.17843674000000001" green="0.8132496843" blue="0.39913875519999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="G1m-2O-1Yl">
+                                <rect key="frame" x="112" y="639" width="191" height="31"/>
+                                <connections>
+                                    <action selector="LungSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="2sr-oM-heB"/>
+                                </connections>
+                            </slider>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QE3-hd-Hid" customClass="Gauge" customModule="GaugeKit">
-                                <rect key="frame" x="77" y="368" width="260" height="233"/>
+                                <rect key="frame" x="76" y="345" width="260" height="233"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rate">
@@ -166,27 +167,35 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="rotate">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                        <color key="value" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                        <real key="value" value="3"/>
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.17843674000000001" green="0.8132496843" blue="0.39913875519999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cdk-rF-6OL">
-                                <rect key="frame" x="119" y="624" width="191" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="ie6-pZ-8pL">
+                                <rect key="frame" x="112" y="601" width="191" height="31"/>
                                 <connections>
-                                    <action selector="sliderChnaged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MOV-8I-qub"/>
+                                    <action selector="heartSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="GTf-Kv-GiP"/>
                                 </connections>
                             </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navBar" translatesAutoresizingMaskIntoConstraints="NO" id="Xnu-LG-8rn">
+                                <rect key="frame" x="-17" y="532" width="462" height="389"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.41164679276315752" blue="0.64584189967105265" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="exerciseButton" destination="yfb-nt-UC7" id="0YM-6O-3xC"/>
+                        <outlet property="heartText" destination="cDz-1N-SBY" id="lpn-vd-rEt"/>
                         <outlet property="heart_gauge" destination="2dx-53-3er" id="bEH-aV-y1l"/>
+                        <outlet property="lungText" destination="W95-r2-Mqf" id="5EV-3v-cqP"/>
                         <outlet property="lung_gauge" destination="QE3-hd-Hid" id="Wsz-bi-h4e"/>
                         <outlet property="navBar" destination="MiL-gj-gBu" id="pdP-b1-bgR"/>
                         <outlet property="paddinglabel" destination="g3k-kJ-k75" id="0rf-7N-Q3R"/>
@@ -200,7 +209,7 @@
         <!--Exercises-->
         <scene sceneID="sKG-Nt-h8J">
             <objects>
-                <viewController title="Exercises" id="IeK-0v-iBw" sceneMemberID="viewController">
+                <viewController title="Exercises" id="IeK-0v-iBw" customClass="UIPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xWF-UM-TgE"/>
                         <viewControllerLayoutGuide type="bottom" id="KfI-yI-bDq"/>
@@ -240,6 +249,9 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17q-DP-NTZ">
+                                <rect key="frame" x="94" y="423" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.10980392156862745" green="0.33333333333333331" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -253,13 +265,13 @@
     <resources>
         <image name="exerciseNav" width="504" height="504"/>
         <image name="heart_icon" width="512" height="512"/>
-        <image name="lungs_icon" width="552" height="594"/>
+        <image name="lungsNew" width="512" height="512"/>
         <image name="navBar" width="504" height="504"/>
         <image name="settingsNav" width="504" height="504"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="79o-fJ-VDE"/>
         <segue reference="pk6-Da-6ur"/>
-        <segue reference="IsH-7Q-6EK"/>
+        <segue reference="79o-fJ-VDE"/>
+        <segue reference="rHX-Nc-vs8"/>
     </inferredMetricsTieBreakers>
 </document>
