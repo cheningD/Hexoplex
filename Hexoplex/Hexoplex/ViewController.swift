@@ -41,9 +41,13 @@ class ViewController: UIViewController {
     
 
     //Navigation buttons at bottom of screen
-    @IBOutlet weak var exerciseButton: UIButton!
-    @IBOutlet weak var settingsButton: UIButton!
+    @IBAction func ExerciseIsClicked(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("StatsToExercises", sender: sender)
+    }
     
+    @IBAction func SettingsIsClicked(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("StatsToSettings", sender: sender)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +56,7 @@ class ViewController: UIViewController {
         var x = 0
         x = 0
         if(x != 0){
-            navBar.backgroundColor = UIColor.redColor()
+            //navBar.backgroundColor = UIColor.redColor()
         }
         // Do any additional setup after loading the view, typically from a nib.
         
