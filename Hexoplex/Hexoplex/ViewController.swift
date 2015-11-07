@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         if(x != 0){
             //navBar.backgroundColor = UIColor.redColor()
         }
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loahttp://www.apple.com/iphone-6s/ding the view, typically from a nib.
         
     }
 
