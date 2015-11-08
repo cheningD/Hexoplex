@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var heartMonitor: UIImageView!
     @IBAction func heartSlider(sender: UISlider) {
         heart_gauge.rate = CGFloat(sender.value)
-        var heartString = Int(sender.value)
+        let heartString = Int(sender.value)
         self.heartText.text = "\(heartString) BPM"
     }
     
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var BeathMonitor: UIImageView!
     @IBAction func LungSlider(sender: UISlider) {
         lung_gauge.rate = CGFloat(sender.value)
-        var lungString = Int(sender.value)
+        let lungString = Int(sender.value)
         self.lungText.text = "\(lungString) BPM"
     }
     
