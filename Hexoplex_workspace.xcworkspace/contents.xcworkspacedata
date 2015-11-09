@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:GaugeKit/GaugeKit.xcodeproj">
+      location = "group:Hexoplex/Hexoplex.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Hexoplex/Hexoplex.xcodeproj">
+      location = "group:GaugeKit/GaugeKit.xcodeproj">
    </FileRef>
 </Workspace>

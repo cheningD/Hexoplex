@@ -13,6 +13,8 @@
 		2EA6698C1BC3453300364B08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EA6698B1BC3453300364B08 /* Images.xcassets */; };
 		2EA6698F1BC3453300364B08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EA6698D1BC3453300364B08 /* LaunchScreen.xib */; };
 		2EA6699B1BC3453300364B08 /* HexoplexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6699A1BC3453300364B08 /* HexoplexTests.swift */; };
+		6F3928371BF11EBB00C416D6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F39282C1BF11E8900C416D6 /* CryptoSwift.framework */; };
+		6F3928381BF11EBB00C416D6 /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F39282C1BF11E8900C416D6 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6FC1EFAC1BE6913A00828C85 /* HexoskinInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1EFAB1BE6913A00828C85 /* HexoskinInterface.swift */; };
 		EBA1DDEC1BD5942700598C05 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA1DDEB1BD5942700598C05 /* ViewController2.swift */; };
 		EBA1DDEE1BD59BE700598C05 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA1DDED1BD59BE700598C05 /* ViewController3.swift */; };
@@ -26,7 +28,70 @@
 			remoteGlobalIDString = 2EA6697E1BC3453300364B08;
 			remoteInfo = Hexoplex;
 		};
+		6F39282B1BF11E8900C416D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE45519693E190098E6F3;
+			remoteInfo = "CryptoSwift iOS";
+		};
+		6F39282D1BF11E8900C416D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5596BDBB1BC8F220007E38D5;
+			remoteInfo = "CryptoSwift watchOS";
+		};
+		6F39282F1BF11E8900C416D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 75D614BF1BD844F2001358B2;
+			remoteInfo = "CryptoSwift tvOS";
+		};
+		6F3928311BF11E8900C416D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 75DF77721BC8EB59006E9520;
+			remoteInfo = "CryptoSwift OSX";
+		};
+		6F3928331BF11E8900C416D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE46019693E190098E6F3;
+			remoteInfo = CryptoSwiftTests;
+		};
+		6F3928351BF11EA400C416D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 754BE45419693E190098E6F3;
+			remoteInfo = "CryptoSwift iOS";
+		};
+		6F3928391BF11EBB00C416D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 754BE45419693E190098E6F3;
+			remoteInfo = "CryptoSwift iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6F39283B1BF11EBB00C416D6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6F3928381BF11EBB00C416D6 /* CryptoSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2EA6697F1BC3453300364B08 /* Hexoplex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hexoplex.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +104,7 @@
 		2EA669941BC3453300364B08 /* HexoplexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexoplexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA669991BC3453300364B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EA6699A1BC3453300364B08 /* HexoplexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexoplexTests.swift; sourceTree = "<group>"; };
+		6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = ../CryptoSwift/CryptoSwift.xcodeproj; sourceTree = "<group>"; };
 		6FC1EFAB1BE6913A00828C85 /* HexoskinInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexoskinInterface.swift; sourceTree = "<group>"; };
 		EBA1DDEB1BD5942700598C05 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		EBA1DDED1BD59BE700598C05 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
@@ -49,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F3928371BF11EBB00C416D6 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +132,7 @@
 		2EA669761BC3453300364B08 = {
 			isa = PBXGroup;
 			children = (
+				6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */,
 				2EA669811BC3453300364B08 /* Hexoplex */,
 				2EA669971BC3453300364B08 /* HexoplexTests */,
 				2EA669801BC3453300364B08 /* Products */,
@@ -121,6 +189,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6F3928241BF11E8800C416D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F39282C1BF11E8900C416D6 /* CryptoSwift.framework */,
+				6F39282E1BF11E8900C416D6 /* CryptoSwift.framework */,
+				6F3928301BF11E8900C416D6 /* CryptoSwift.framework */,
+				6F3928321BF11E8900C416D6 /* CryptoSwift.framework */,
+				6F3928341BF11E8900C416D6 /* CryptoSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,10 +211,13 @@
 				2EA6697B1BC3453300364B08 /* Sources */,
 				2EA6697C1BC3453300364B08 /* Frameworks */,
 				2EA6697D1BC3453300364B08 /* Resources */,
+				6F39283B1BF11EBB00C416D6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6F3928361BF11EA400C416D6 /* PBXTargetDependency */,
+				6F39283A1BF11EBB00C416D6 /* PBXTargetDependency */,
 			);
 			name = Hexoplex;
 			productName = Hexoplex;
@@ -189,6 +272,12 @@
 			mainGroup = 2EA669761BC3453300364B08;
 			productRefGroup = 2EA669801BC3453300364B08 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6F3928241BF11E8800C416D6 /* Products */;
+					ProjectRef = 6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2EA6697E1BC3453300364B08 /* Hexoplex */,
@@ -196,6 +285,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6F39282C1BF11E8900C416D6 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = 6F39282B1BF11E8900C416D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F39282E1BF11E8900C416D6 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = 6F39282D1BF11E8900C416D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F3928301BF11E8900C416D6 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = 6F39282F1BF11E8900C416D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F3928321BF11E8900C416D6 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = 6F3928311BF11E8900C416D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F3928341BF11E8900C416D6 /* CryptoSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CryptoSwiftTests.xctest;
+			remoteRef = 6F3928331BF11E8900C416D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2EA6697D1BC3453300364B08 /* Resources */ = {
@@ -245,6 +372,16 @@
 			isa = PBXTargetDependency;
 			target = 2EA6697E1BC3453300364B08 /* Hexoplex */;
 			targetProxy = 2EA669951BC3453300364B08 /* PBXContainerItemProxy */;
+		};
+		6F3928361BF11EA400C416D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CryptoSwift iOS";
+			targetProxy = 6F3928351BF11EA400C416D6 /* PBXContainerItemProxy */;
+		};
+		6F39283A1BF11EBB00C416D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CryptoSwift iOS";
+			targetProxy = 6F3928391BF11EBB00C416D6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -356,6 +493,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Hexoplex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Diversity.$(PRODUCT_NAME:rfc1034identifier)";
@@ -367,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Hexoplex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Diversity.$(PRODUCT_NAME:rfc1034identifier)";
