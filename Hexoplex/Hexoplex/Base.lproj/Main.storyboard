@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Statistis-->
+        <!--Statistics-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Statistis" id="BYZ-38-t0r" customClass="ViewController" customModule="Hexoplex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Statistics" id="BYZ-38-t0r" customClass="ViewController" customModule="Hexoplex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="431" y="477"/>
         </scene>
-        <!--View Controller3-->
+        <!--Settings-->
         <scene sceneID="Ucn-nn-JMH">
             <objects>
-                <viewController id="7vS-im-REf" customClass="ViewController3" customModule="Hexoplex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="7vS-im-REf" customClass="ViewController3" customModule="Hexoplex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BHe-1K-GYN"/>
                         <viewControllerLayoutGuide type="bottom" id="jxn-6v-Mvd"/>
@@ -208,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="956" y="99"/>
         </scene>
-        <!--View Controller2-->
+        <!--Exercises-->
         <scene sceneID="Yot-V7-AHq">
             <objects>
-                <viewController id="MlA-nl-dYt" customClass="ViewController2" customModule="Hexoplex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Exercises" id="MlA-nl-dYt" customClass="ViewController2" customModule="Hexoplex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y9p-Ls-IaG"/>
                         <viewControllerLayoutGuide type="bottom" id="YoJ-8E-9XS"/>
@@ -270,8 +270,8 @@
         <image name="lungsNew" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hNG-NF-E2V"/>
-        <segue reference="FrF-rw-jbN"/>
-        <segue reference="P7t-of-tz7"/>
+        <segue reference="F1N-zr-AbI"/>
+        <segue reference="Sym-pK-u3w"/>
+        <segue reference="i3W-8h-MF6"/>
     </inferredMetricsTieBreakers>
 </document>
