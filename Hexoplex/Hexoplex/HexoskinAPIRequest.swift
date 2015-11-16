@@ -59,7 +59,8 @@ class HexoskinAPIRequest {
         print(self.headers["x-hexoapisignature"])
     }
     
-    private func makeAPIRequest(){
+    private func makeAPIRequest()->NSDictionary? {
+        var result:NSDictionary?
         var request = NSMutableURLRequest(URL: NSURL(string: self.url)!,
             cachePolicy: .UseProtocolCachePolicy,
             timeoutInterval: 10.0)
@@ -82,9 +83,10 @@ class HexoskinAPIRequest {
                 catch {
             
                 }
+                result = json!
                 let stuff = json!["objects"]
                 print(stuff!)
-                print(stuff![1]["email"])
+                print(stuff![0]["email"])
                 
                 
                 //let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
@@ -94,15 +96,18 @@ class HexoskinAPIRequest {
         })
         
         dataTask.resume()
+        return result
     }
     
     
-    internal func getUserInfo() {
+    internal func getUserInfo()->NSDictionary? {
         self.url = "https://api.hexoskin.com/api/user/"
         createHeaders()
         print("DEBUG: HexoskinAPIUser HEADERS: ")
         print(self.headers)
-        makeAPIRequest()
+        let data = makeAPIRequest()
+        
+        return data
     }
     
 }

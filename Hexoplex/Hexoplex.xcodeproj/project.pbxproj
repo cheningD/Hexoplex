@@ -157,8 +157,8 @@
 				EBA1DDEB1BD5942700598C05 /* ViewController2.swift */,
 				EBA1DDED1BD59BE700598C05 /* ViewController3.swift */,
 				2EA669881BC3453300364B08 /* Main.storyboard */,
-				2EA6698B1BC3453300364B08 /* Images.xcassets */,
 				2EA6698D1BC3453300364B08 /* LaunchScreen.xib */,
+				2EA6698B1BC3453300364B08 /* Images.xcassets */,
 				2EA669821BC3453300364B08 /* Supporting Files */,
 			);
 			path = Hexoplex;
