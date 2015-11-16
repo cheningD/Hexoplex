@@ -59,9 +59,8 @@ class HexoskinAPIRequest {
         print(self.headers["x-hexoapisignature"])
     }
     
-    private func makeAPIRequest()->NSDictionary? {
-        var result:NSDictionary?
-        var request = NSMutableURLRequest(URL: NSURL(string: self.url)!,
+    private func makeAPIRequest( completion: (user1: NSDictionary)->Void) {
+        let request = NSMutableURLRequest(URL: NSURL(string: self.url)!,
             cachePolicy: .UseProtocolCachePolicy,
             timeoutInterval: 10.0)
         request.HTTPMethod = "GET"
@@ -73,9 +72,9 @@ class HexoskinAPIRequest {
                 print("DEBUG: HexoskinAPIUser HTTP RESPONSE ERROR: ")
                 print(error)
             } else {
-                let httpResponse = response as? NSHTTPURLResponse
-                print(httpResponse)
-                print("DEBUG: HexoskinAPIUser HTTP data: " )
+                //let httpResponse = response as? NSHTTPURLResponse
+                //print(httpResponse)
+                //print("DEBUG: HexoskinAPIUser HTTP data: " )
                 var json:NSDictionary?
                 do {
                     json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
@@ -83,10 +82,13 @@ class HexoskinAPIRequest {
                 catch {
             
                 }
-                result = json!
                 let stuff = json!["objects"]
-                print(stuff!)
-                print(stuff![0]["email"])
+                let user1 = stuff?[0]! as! NSDictionary
+                
+                completion(user1: user1)
+                //print(stuff!)
+                //print(user1)
+                //print(stuff![0]["email"])
                 
                 
                 //let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
@@ -96,18 +98,30 @@ class HexoskinAPIRequest {
         })
         
         dataTask.resume()
-        return result
     }
     
     
-    internal func getUserInfo()->NSDictionary? {
+    internal func getUserInfo( completion: (result: NSDictionary)->Void) {
         self.url = "https://api.hexoskin.com/api/user/"
         createHeaders()
         print("DEBUG: HexoskinAPIUser HEADERS: ")
         print(self.headers)
-        let data = makeAPIRequest()
         
-        return data
+        func completion1(user1: NSDictionary){
+            let userInfoDict: [String:String] =
+            [
+                "email" : String(user1["email"]!),
+                "first_name" : String(user1["first_name"]!),
+                "id" : String(user1["id"]!),
+                "last_name" : String(user1["last_name"]!),
+                "profile" : String(user1["profile"]!),
+                "resource_uri" : String(user1["resource_uri"]!),
+                "username" : String(user1["username"]!),
+            ]
+            completion(result: userInfoDict)
+        }
+        makeAPIRequest(completion1)
+        
     }
     
 }
