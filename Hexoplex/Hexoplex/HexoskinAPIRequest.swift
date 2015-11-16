@@ -1,5 +1,5 @@
 //
-//  HexoskinInterface.swift
+//  HexoskinAPIRequest.swift
 //  Hexoplex
 //
 //  Created by Chening Duker on 11/1/15.
@@ -51,7 +51,7 @@ class HexoskinAPIRequest {
         var basicAuth = username + ":" + password
         basicAuth = base64Encode(basicAuth)
         self.headers["authorization"] = "Basic " + basicAuth
-        self.headers["x-hexotimestamp"] = "1447094785" //String(NSDate().timeIntervalSince1970)
+        self.headers["x-hexotimestamp"] = String(Int(NSDate().timeIntervalSince1970))
         //Signature is the SHA of Private Key, Timestamp, Url.
         let signature = self.privateKey + self.headers["x-hexotimestamp"]! + self.url
         self.headers["x-hexoapisignature"] = signature.sha1()
@@ -73,12 +73,23 @@ class HexoskinAPIRequest {
                 print(error)
             } else {
                 let httpResponse = response as? NSHTTPURLResponse
-                print("DEBUG: HexoskinAPIUser HTTP RESPONSE: " )
                 print(httpResponse)
-                print("headers:")
-                print(httpResponse?.allHeaderFields)
-                print("description")
-                print(httpResponse?.description)
+                print("DEBUG: HexoskinAPIUser HTTP data: " )
+                var json:NSDictionary?
+                do {
+                    json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
+                }
+                catch {
+            
+                }
+                let stuff = json!["objects"]
+                print(stuff!)
+                print(stuff![1]["email"])
+                
+                
+                //let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                //print("Error could not parse JSON: '\(jsonStr)'")
+                
             }
         })
         

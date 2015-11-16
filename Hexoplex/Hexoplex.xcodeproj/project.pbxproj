@@ -15,7 +15,7 @@
 		2EA6699B1BC3453300364B08 /* HexoplexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6699A1BC3453300364B08 /* HexoplexTests.swift */; };
 		6F3928371BF11EBB00C416D6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F39282C1BF11E8900C416D6 /* CryptoSwift.framework */; };
 		6F3928381BF11EBB00C416D6 /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F39282C1BF11E8900C416D6 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6FC1EFAC1BE6913A00828C85 /* HexoskinInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1EFAB1BE6913A00828C85 /* HexoskinInterface.swift */; };
+		6FC1EFAC1BE6913A00828C85 /* HexoskinAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1EFAB1BE6913A00828C85 /* HexoskinAPIRequest.swift */; };
 		EBA1DDEC1BD5942700598C05 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA1DDEB1BD5942700598C05 /* ViewController2.swift */; };
 		EBA1DDEE1BD59BE700598C05 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA1DDED1BD59BE700598C05 /* ViewController3.swift */; };
 /* End PBXBuildFile section */
@@ -105,7 +105,7 @@
 		2EA669991BC3453300364B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EA6699A1BC3453300364B08 /* HexoplexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexoplexTests.swift; sourceTree = "<group>"; };
 		6F3928231BF11E8800C416D6 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = ../CryptoSwift/CryptoSwift.xcodeproj; sourceTree = "<group>"; };
-		6FC1EFAB1BE6913A00828C85 /* HexoskinInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexoskinInterface.swift; sourceTree = "<group>"; };
+		6FC1EFAB1BE6913A00828C85 /* HexoskinAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexoskinAPIRequest.swift; sourceTree = "<group>"; };
 		EBA1DDEB1BD5942700598C05 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		EBA1DDED1BD59BE700598C05 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				2EA669841BC3453300364B08 /* AppDelegate.swift */,
-				6FC1EFAB1BE6913A00828C85 /* HexoskinInterface.swift */,
+				6FC1EFAB1BE6913A00828C85 /* HexoskinAPIRequest.swift */,
 				2EA669861BC3453300364B08 /* ViewController.swift */,
 				EBA1DDEB1BD5942700598C05 /* ViewController2.swift */,
 				EBA1DDED1BD59BE700598C05 /* ViewController3.swift */,
@@ -353,7 +353,7 @@
 				2EA669851BC3453300364B08 /* AppDelegate.swift in Sources */,
 				EBA1DDEE1BD59BE700598C05 /* ViewController3.swift in Sources */,
 				EBA1DDEC1BD5942700598C05 /* ViewController2.swift in Sources */,
-				6FC1EFAC1BE6913A00828C85 /* HexoskinInterface.swift in Sources */,
+				6FC1EFAC1BE6913A00828C85 /* HexoskinAPIRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
