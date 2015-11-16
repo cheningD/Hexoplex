@@ -53,10 +53,10 @@ class HexoskinAPIRequest {
         self.headers["authorization"] = "Basic " + basicAuth
         self.headers["x-hexotimestamp"] = String(Int(NSDate().timeIntervalSince1970))
         //Signature is the SHA of Private Key, Timestamp, Url.
-        let signature = self.privateKey + self.headers["x-hexotimestamp"]! + self.url
-        self.headers["x-hexoapisignature"] = signature.sha1()
-        print("DEBUG: HexoskinAPIUser SHA: " +  signature + " --> ")
-        print(self.headers["x-hexoapisignature"])
+        let signature:String = self.privateKey + self.headers["x-hexotimestamp"]! + self.url        
+        self.headers["x-hexoapisignature"] = signature.fuckCryptoSwiftsha1()
+        //print("DEBUG: HexoskinAPIUser SHA: " +  signature + " --> ")
+        //print(self.headers["x-hexoapisignature"])
     }
     
     private func makeAPIRequest( completion: (user1: NSDictionary)->Void) {
