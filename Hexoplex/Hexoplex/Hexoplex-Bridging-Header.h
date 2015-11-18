@@ -2,7 +2,8 @@
 //  Hexoplex-Bridging-Header.h
 //  Hexoplex
 //
-//  Created by Chening Duker on 11/16/15.
+
+//  Created by Chening Duker & Paul Skorski on 11/16/15.
 //  Copyright © 2015 Yeshwanth Devabhaktuni. All rights reserved.
 //
 
@@ -14,3 +15,4 @@
 
 
 #import <CommonCrypto/CommonHMAC.h>
+#import "BEMSimpleLineGraphView.h"

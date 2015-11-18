@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Hexoplex/Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Hexoplex/Hexoplex.xcodeproj">
    </FileRef>
    <FileRef

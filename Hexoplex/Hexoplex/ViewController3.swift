@@ -15,21 +15,21 @@ class ViewController3: UIViewController {
     @IBAction func StatsIsClicked(sender: UIBarButtonItem) {
     self.performSegueWithIdentifier("SettingsToStats", sender: sender)
     }
-    
+
     @IBAction func ExercisesIsClicked(sender: UIBarButtonItem) {
         self.performSegueWithIdentifier("SettingsToExercises", sender: sender)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navBar.barTintColor = UIColor(red: 46/255, green: 207/255, blue: 102/255, alpha: 1)
         debugText.text = "DEBUG SETTINGS TEXT"
         
-        
+
         let user = HexoskinAPIRequest(username: "athlete@hexoskin.com", password: "hexoskin")
         func getUserInfo(info: NSDictionary){
-            
+
             dispatch_async(dispatch_get_main_queue(), {
                 let infoText =
                         "email " + String(info["email"]!)
@@ -43,16 +43,17 @@ class ViewController3: UIViewController {
         }
         user.getUserInfo(getUserInfo)
         
+
         // Do any additional setup after loading the view.
-        
-        
+
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
