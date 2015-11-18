@@ -9,10 +9,15 @@
 import UIKit
 import GaugeKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+    
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var paddinglabel: UILabel!
+    
+    @IBOutlet var heartTile: UIView!
+    @IBOutlet var lungTile: UIView!
+    
     
     //Text below heart and lung gauges
     @IBOutlet weak var heartText: UILabel!
@@ -28,6 +33,19 @@ class ViewController: UIViewController {
         heart_gauge.rate = CGFloat(sender.value)
         let heartString = Int(sender.value)
         self.heartText.text = "\(heartString) BPM"
+        
+        if(sender.value > 150 && sender.value < 165)
+        {
+            heartTile.backgroundColor = UIColor.yellowColor()
+        }
+        else if(sender.value > 165)
+        {
+            heartTile.backgroundColor = UIColor.redColor()
+        }
+        else
+        {
+            heartTile.backgroundColor = UIColor.greenColor()
+        }
     }
     
     @IBOutlet var lung_gauge: Gauge!
@@ -36,6 +54,20 @@ class ViewController: UIViewController {
         lung_gauge.rate = CGFloat(sender.value)
         let lungString = Int(sender.value)
         self.lungText.text = "\(lungString) BPM"
+        
+        if(sender.value > 40 && sender.value < 45)
+        {
+            lungTile.backgroundColor = UIColor.yellowColor()
+        }
+        else if(sender.value > 45)
+        {
+            lungTile.backgroundColor = UIColor.redColor()
+        }
+        else
+        {
+            lungTile.backgroundColor = UIColor.greenColor()
+        }
+        
     }
     
     
@@ -58,7 +90,12 @@ class ViewController: UIViewController {
         if(x != 0){
             //navBar.backgroundColor = UIColor.redColor()
         }
-        // Do any additional setup after loahttp://www.apple.com/iphone-6s/ding the view, typically from a nib.
+        
+        heartTile.layer.cornerRadius = 30.0
+        heartTile.layer.opacity = 25.0
+        
+        lungTile.layer.cornerRadius = 30.0
+        lungTile.layer.opacity = 25.0
         
     }
 
@@ -67,6 +104,49 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func swipeRight(sender: AnyObject) {
+        self.performSegueWithIdentifier("StatsToSettings", sender: self)
+    }
+    
+    @IBAction func swipeLeft(sender: AnyObject) {
+        self.performSegueWithIdentifier("StatsToExercises", sender: self)
+    }
+    
+    @IBAction func heartTileClicked(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("heartHistory", sender: self)
+    }
+    
+    @IBAction func lungTileClicked(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("lungHistory", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "heartHistory"
+        {
+            if let controller = segue.destinationViewController as? UIViewController
+            {
+                controller.popoverPresentationController!.delegate = self
+                controller.preferredContentSize = CGSize(width: 400, height: 300)
+            }
+        }
+        
+        if segue.identifier == "lungHistory"
+        {
+            if let controller = segue.destinationViewController as? UIViewController
+            {
+                controller.popoverPresentationController!.delegate = self
+                controller.preferredContentSize = CGSize(width: 400, height: 300)
+            }
+        }
+    }
 
+
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
+    
+    
 }
 

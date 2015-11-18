@@ -29,6 +29,7 @@ class ViewController2: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBOutlet weak var exerciseList: UITableView!
     
 
     /*

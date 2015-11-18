@@ -26,8 +26,8 @@ class ViewController3: UIViewController {
         navBar.barTintColor = UIColor(red: 46/255, green: 207/255, blue: 102/255, alpha: 1)
         debugText.text = "DEBUG SETTINGS TEXT"
         
-        let user = HexoskinAPIRequest(username: "athlete@hexoskin.com", password: "hexoskin")
-        user.getUserInfo()
+        //let user = HexoskinAPIRequest(username: "athlete@hexoskin.com", password: "hexoskin")
+        //user.getUserInfo()
         
         // Do any additional setup after loading the view.
         
