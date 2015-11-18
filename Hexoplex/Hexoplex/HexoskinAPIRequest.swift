@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import CryptoSwift
+import Alamofire
+
 
 class HexoskinAPIRequest {
     //Member variables
@@ -25,11 +26,14 @@ class HexoskinAPIRequest {
         "postman-token": "197a8b89-71e0-54a3-0f5e-65ad029095d9"
     ]
     
+    //Variables that are created via API REQUESTS
+    private var userId:String?
     
     //Constructor
     init(username:String, password:String){
         self.username = username
         self.password = password
+        self.userId = nil
     }
     
     private func base64Encode(plainString:String)->String {
@@ -80,7 +84,7 @@ class HexoskinAPIRequest {
                     json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
                 }
                 catch {
-            
+                    print("DEBUG: Error in makeAPIRequest func. Cannot make json object from response")
                 }
                 let stuff = json!["objects"]
                 let user1 = stuff?[0]! as! NSDictionary
@@ -108,6 +112,7 @@ class HexoskinAPIRequest {
         print(self.headers)
         
         func completion1(user1: NSDictionary){
+            self.userId = String(user1["id"]!)
             let userInfoDict: [String:String] =
             [
                 "email" : String(user1["email"]!),
