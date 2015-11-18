@@ -359,6 +359,9 @@
                                     <navigationItem title="Hexoplex" id="6bf-la-8mw"/>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="12248856_10153323291130897_1642467111_n" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-bI-2HG">
+                                <rect key="frame" x="-1" y="65" width="415" height="627"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.10980392156862745" green="0.33333333333333331" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -376,6 +379,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="12248856_10153323291130897_1642467111_n" width="248" height="384"/>
         <image name="Screen Shot 2015-11-17 at 9.44.58 PM" width="415" height="432"/>
         <image name="Screen Shot 2015-11-17 at 9.45.23 PM" width="414" height="435"/>
         <image name="heart_icon" width="512" height="512"/>
