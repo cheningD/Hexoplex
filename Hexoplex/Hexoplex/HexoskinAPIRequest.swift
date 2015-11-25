@@ -10,12 +10,13 @@ import Foundation
 import Alamofire
 
 
-class HexoskinAPIRequest {
+class HexoskinAPIRequest : NSObject {
     //Member variables
     private var username:String
     private var password:String
     private var url = ""
     private let privateKey = "dODqtRuAQdyvUUS0gEbJUMssx0WPad"
+    
     
     private var headers = [
         "authorization": " Basic XXX",
@@ -26,28 +27,35 @@ class HexoskinAPIRequest {
         "postman-token": "197a8b89-71e0-54a3-0f5e-65ad029095d9"
     ]
     
-    //Variables that are created via API REQUESTS
-    private var userId:String?
+    private struct jsonHexoskinDatatype {
+        let heartRate:Int = 19
+        let breathingRate:Int = 33
+        let minVentialtion:Int = 36
+        let activity:Int = 49
+    }
+    private let hxDatatype = jsonHexoskinDatatype()
+    
+    private var realtimeTimer:NSTimer? = nil
+    private var realtimeRecordId:Int = 0
     
     //Constructor
     init(username:String, password:String){
         self.username = username
         self.password = password
-        self.userId = nil
     }
     
     private func base64Encode(plainString:String)->String {
         let plainData = (plainString as
             NSString).dataUsingEncoding(NSUTF8StringEncoding)
         let base64String = plainData!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
-        print("DEBUG: HexoskinAPIUser base64 encode: " + plainString + " --> " + String(base64String))
+        //print("DEBUG: HexoskinAPIUser base64 encode: " + plainString + " --> " + String(base64String))
         return String(base64String)
     }
     
     private func base64Decode( base64String:String)->String {
         let decodedData = NSData(base64EncodedString: base64String, options:NSDataBase64DecodingOptions(rawValue: 0))
         let decodedString = NSString(data: decodedData!, encoding: NSUTF8StringEncoding)
-        print("DEBUG: HexoskinAPIUser base64 decode: " + base64String + " --> " + String(decodedString))
+        //print("DEBUG: HexoskinAPIUser base64 decode: " + base64String + " --> " + String(decodedString))
     return String(decodedString);
     }
     
@@ -108,11 +116,10 @@ class HexoskinAPIRequest {
     internal func getUserInfo( completion: (result: NSDictionary)->Void) {
         self.url = "https://api.hexoskin.com/api/user/"
         createHeaders()
-        print("DEBUG: HexoskinAPIUser HEADERS: ")
-        print(self.headers)
+        //print("DEBUG: HexoskinAPIUser HEADERS: ")
+        //print(self.headers)
         
         func completion1(user1: NSDictionary){
-            self.userId = String(user1["id"]!)
             let userInfoDict: [String:String] =
             [
                 "email" : String(user1["email"]!),
@@ -129,4 +136,114 @@ class HexoskinAPIRequest {
         
     }
     
+    //Reuests  specific record timestamp to return realtime data
+    func getRealtimeUpdate(sender:AnyObject) {
+        Alamofire.request(.GET, self.url, headers: self.headers)
+            .responseJSON { response in switch response.result {
+            case .Success(let JSON3):
+                //print("Super Success with JSON: \(JSON3)")
+                let heartTemp = JSON3[0]["data"]! as! NSDictionary!
+                let heartDataArr = heartTemp["19"]! as! NSArray
+                let lastIndex:Int = -1 + heartDataArr.count
+                let newStartTime = heartDataArr[lastIndex][0] as! Int
+                let newEndTime:Int = newStartTime + ( 24 * 60 * 60 * 256)
+                print("Here's the \(lastIndex) index: \(heartDataArr[lastIndex])")
+                self.url = "https://api.hexoskin.com/api/data/?record=\(self.realtimeRecordId)"
+                    + "&datatype=\(self.hxDatatype.heartRate)"
+                    + "&start=\(newStartTime)"
+                    + "&end=\(newEndTime)"
+                self.createHeaders()
+                
+            case .Failure(let error):
+                print("getRealtimeUpdate() REQUEST failed with error: \(error)")
+                }
+        }
+    }
+    
+    internal func getRealtimeData() {
+        self.url = "https://api.hexoskin.com/api/user/"
+        self.createHeaders()
+        //Get user info
+        //REQUEST 1
+        Alamofire.request(.GET, self.url, headers: self.headers)
+            .responseJSON { response in switch response.result {
+            case .Success(let JSON):
+                //print("Success with JSON: \(JSON)")
+                let userId0 = JSON as! NSDictionary
+                let userId_:Int = userId0["objects"]![0]["id"] as! Int
+                let userId:String = String(userId_)
+                print(userId)
+                
+                self.url = "https://api.hexoskin.com/api/record/?user=\(userId)"
+                self.createHeaders()
+                
+                //Request2
+                Alamofire.request(.GET, self.url, headers: self.headers)
+                    .responseJSON { response in switch response.result {
+                    case .Success(let JSON):
+                        //print("Success with JSON: \(JSON)")
+                        let res2 = JSON as! NSDictionary
+                        let status:String = res2["objects"]![0]["status"] as! String
+                        self.realtimeRecordId = res2["objects"]![0]["id"] as! Int
+                        let startTime:Int = res2["objects"]![0]["start"] as! Int
+                        if (status == "realtime") {
+                            print( "realtime data available! status = \(status)")
+                            let endTime:Int = startTime + ( 24 * 60 * 60 * 256)
+        
+                            // Get actual realtime data
+                            
+                            self.url = "https://api.hexoskin.com/api/data/?record=\(self.realtimeRecordId)"
+                            + "&datatype=\(self.hxDatatype.heartRate)"
+                            + "&start=\(startTime)"
+                            + "&end=\(endTime)"
+                            self.createHeaders()
+                            // Initialize timer to get data
+                            self.realtimeTimer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "getRealtimeUpdate:", userInfo: nil, repeats: true)
+
+                        }
+                        else {
+                            print( "no realtime data status = \(status)")
+                            let endTime:Int = res2["objects"]![0]["end"] as! Int
+                            self.url = "https://api.hexoskin.com/api/data/?record=\(self.realtimeRecordId)"
+                                + "&datatype=\(self.hxDatatype.heartRate)"
+                                + "&start=\(startTime)"
+                                + "&end=\(endTime)"
+                            self.createHeaders()
+                            //REQUEST (3.5 NOT INCLUDED IN FINAL APP)
+                            Alamofire.request(.GET, self.url, headers: self.headers)
+                                .responseJSON { response in switch response.result {
+                                case .Success(let JSON4):
+                                    print("Super Success with JSON: \(JSON4)")
+                                case .Failure(let error):
+                                    print("getRealtimeData() REQUEST 2 failed with error: \(error)")
+                                    }
+                            }
+                            
+                        }
+
+
+                    case .Failure(let error):
+                         print("getRealtimeData() REQUEST 2 failed with error: \(error)")
+                    }
+                }
+                
+            case .Failure(let error):
+                print("getRealtimeData() REQUEST 1 failed with error: \(error)")
+            }
+                
+        }
+        
+    }
+    
+    
+    
+    internal func getRealtimeBreathingRate() {
+        //1. Get User Info
+        Alamofire.request(.GET, "https://httpbin.org/get", headers: self.headers)
+            .responseString { response in
+                print("Success: \(response.result.isSuccess)")
+                print("Response String: \(response.result.value)")
+                        }
+    }
+
 }

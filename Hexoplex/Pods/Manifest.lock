@@ -23,6 +23,7 @@ PODS:
   - Alamofire (3.1.2)
   - BEMSimpleLineGraph (4.1)
   - FLKAutoLayout (0.2.1)
+  - GaugeKit (0.3.0)
   - ORStackView (3.0.1):
     - FLKAutoLayout (~> 0.2)
   - SwiftyJSON (2.3.1)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - AFNetworking (~> 2.6)
   - Alamofire (~> 3.0)
   - BEMSimpleLineGraph (~> 4.1)
+  - GaugeKit (~> 0.3)
   - ORStackView (~> 3.0)
   - SwiftyJSON (~> 2.3)
 
@@ -39,6 +41,7 @@ SPEC CHECKSUMS:
   Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
   BEMSimpleLineGraph: 44fd451f27f8e9cf96f2da5bea27603093576dd1
   FLKAutoLayout: 9db6b30c2008d230da608e62c607b11c23b942e6
+  GaugeKit: 73e6923434aa710079552a415c5c2e0adad13653
   ORStackView: a1bb52748cd0ae29891c140baf22ff8972fb363c
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
 

@@ -125,7 +125,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "heartHistory"
         {
-            if let controller = segue.destinationViewController as? UIViewController
+            if let controller = segue.destinationViewController as UIViewController?
             {
                 controller.popoverPresentationController!.delegate = self
                 controller.preferredContentSize = CGSize(width: 400, height: 300)
@@ -134,7 +134,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         
         if segue.identifier == "lungHistory"
         {
-            if let controller = segue.destinationViewController as? UIViewController
+            if let controller = segue.destinationViewController as UIViewController?
             {
                 controller.popoverPresentationController!.delegate = self
                 controller.preferredContentSize = CGSize(width: 400, height: 300)

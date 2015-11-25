@@ -19,7 +19,6 @@
 		9794BE8B1BFB9BCE00617CCA /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE7C1BFB9BCE00617CCA /* BEMLine.m */; };
 		9794BE8C1BFB9BCE00617CCA /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE7E1BFB9BCE00617CCA /* BEMPermanentPopupView.m */; };
 		9794BE8D1BFB9BCE00617CCA /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE801BFB9BCE00617CCA /* BEMSimpleLineGraphView.m */; };
-		9794BE8E1BFB9BCE00617CCA /* BEMSimpleLineGraph.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9794BE821BFB9BCE00617CCA /* BEMSimpleLineGraph.xcconfig */; };
 		9794BE8F1BFB9BCE00617CCA /* BEMSimpleLineGraph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE831BFB9BCE00617CCA /* BEMSimpleLineGraph-dummy.m */; };
 		9794BE901BFB9BCE00617CCA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9794BE861BFB9BCE00617CCA /* Info.plist */; };
 		9794BE921BFBB31D00617CCA /* HeartHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE911BFBB31D00617CCA /* HeartHistory.m */; };
@@ -146,13 +145,13 @@
 				2EA669841BC3453300364B08 /* AppDelegate.swift */,
 				97FF5BD71BF9593000377BCA /* HexoskinAPIRequest.swift */,
 				9757B1EB1BFAE33C00B07DC9 /* Hexoplex-Bridging-Header.h */,
-				2EA669861BC3453300364B08 /* ViewController.swift */,
+				9701D8AA1BFAC917007CADF2 /* SwiftSha.swift */,
 				EBA1DDEB1BD5942700598C05 /* ViewController2.swift */,
 				9794BE911BFBB31D00617CCA /* HeartHistory.m */,
 				EBA1DDED1BD59BE700598C05 /* ViewController3.swift */,
 				9794BE931BFBB38400617CCA /* HeartHistory.h */,
-				9701D8AA1BFAC917007CADF2 /* SwiftSha.swift */,
 				2EA669881BC3453300364B08 /* Main.storyboard */,
+				2EA669861BC3453300364B08 /* ViewController.swift */,
 				2EA6698D1BC3453300364B08 /* LaunchScreen.xib */,
 				2EA6698B1BC3453300364B08 /* Images.xcassets */,
 				2EA669821BC3453300364B08 /* Supporting Files */,
@@ -313,7 +312,6 @@
 			files = (
 				2EA6698A1BC3453300364B08 /* Main.storyboard in Resources */,
 				2EA6698F1BC3453300364B08 /* LaunchScreen.xib in Resources */,
-				9794BE8E1BFB9BCE00617CCA /* BEMSimpleLineGraph.xcconfig in Resources */,
 				9794BE901BFB9BCE00617CCA /* Info.plist in Resources */,
 				2EA6698C1BC3453300364B08 /* Images.xcassets in Resources */,
 			);
@@ -531,10 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Hexoplex_workspace-cdwryuxcxmfivqhakladetxxdodg/Build/Products/Debug",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Hexoplex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Diversity.$(PRODUCT_NAME:rfc1034identifier)";
@@ -549,10 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Hexoplex_workspace-cdwryuxcxmfivqhakladetxxdodg/Build/Products/Debug",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Hexoplex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Diversity.$(PRODUCT_NAME:rfc1034identifier)";

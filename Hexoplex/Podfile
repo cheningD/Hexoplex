@@ -8,6 +8,7 @@ target 'Hexoplex' do
   pod 'SwiftyJSON', '~> 2.3'
   pod 'BEMSimpleLineGraph', '~> 4.1'
   pod 'Alamofire', '~> 3.0'
+  pod 'GaugeKit', '~> 0.3'
 end
 
 target 'HexoplexTests' do

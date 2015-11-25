@@ -88,6 +88,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Hexoplex/Alamofire.framework"
   install_framework "Pods-Hexoplex/BEMSimpleLineGraph.framework"
   install_framework "Pods-Hexoplex/FLKAutoLayout.framework"
+  install_framework "Pods-Hexoplex/GaugeKit.framework"
   install_framework "Pods-Hexoplex/ORStackView.framework"
   install_framework "Pods-Hexoplex/SwiftyJSON.framework"
 fi
@@ -96,6 +97,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Hexoplex/Alamofire.framework"
   install_framework "Pods-Hexoplex/BEMSimpleLineGraph.framework"
   install_framework "Pods-Hexoplex/FLKAutoLayout.framework"
+  install_framework "Pods-Hexoplex/GaugeKit.framework"
   install_framework "Pods-Hexoplex/ORStackView.framework"
   install_framework "Pods-Hexoplex/SwiftyJSON.framework"
 fi
