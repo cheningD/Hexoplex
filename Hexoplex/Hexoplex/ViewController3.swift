@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController3: UIViewController {
     @IBOutlet weak var navBar: UINavigationBar!
@@ -27,8 +28,8 @@ class ViewController3: UIViewController {
         debugText.text = "DEBUG SETTINGS TEXT"
         
 
-        let user = HexoskinAPIRequest(username: "athlete@hexoskin.com", password: "hexoskin")
-
+        //let user = HexoskinAPIRequest(username: "athlete@hexoskin.com", password: "hexoskin")
+        let user = HexoskinAPIRequest(username: "cdduker@gmail.com", password: "oregon17")
         
         // This function diaplays the user info recieved from the API request
         // getUserInfo(). dispatch_async makes sure this operation is done in 
@@ -47,13 +48,33 @@ class ViewController3: UIViewController {
             })
         }
         user.getUserInfo(displayUserInfo)
+        // Call moved to gauge screen //user.getRealtimeData()
         // Do any additional setup after loading the view.
-
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func sendMessage(sender: UIButton) {
+        sendRequest()
+    }
+    
+    
+    func sendRequest(){
+        let data = [
+            "To" : "+18144418654",
+            "From" : "+18148263789",
+            "Body" : "Yout friend is having an anxiety attack"
+        ]
+        
+        Alamofire.request(.POST, "https://AC8bd8d9a25ad4cc983c7fc9d28b3f9176:7964a41dde9ec33d7a7c580f7f5379d4@api.twilio.com/2010-04-01/Accounts/AC8bd8d9a25ad4cc983c7fc9d28b3f9176/Messages", parameters: data)
+            .responseJSON { response in
+                print(response.request)
+                print(response.response)
+                print(response.result)
+        }
     }
 
 

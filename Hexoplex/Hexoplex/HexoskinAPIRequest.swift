@@ -37,7 +37,8 @@ class HexoskinAPIRequest : NSObject {
     
     private var realtimeTimer:NSTimer? = nil
     private var realtimeRecordId:Int = 0
-    
+    private var realtimeHeartRateGaugueUpdateFunc: (Int)->Void = {_ in }
+    private let timerInterval:Double = 0.5 // refresh data
     //Constructor
     init(username:String, password:String){
         self.username = username
@@ -142,12 +143,19 @@ class HexoskinAPIRequest : NSObject {
             .responseJSON { response in switch response.result {
             case .Success(let JSON3):
                 //print("Super Success with JSON: \(JSON3)")
+                
                 let heartTemp = JSON3[0]["data"]! as! NSDictionary!
                 let heartDataArr = heartTemp["19"]! as! NSArray
                 let lastIndex:Int = -1 + heartDataArr.count
+                heartDataArr[lastIndex]
+                print("Here's the \(lastIndex) index: \(heartDataArr[lastIndex])")
+                let result:Int = heartDataArr[lastIndex][1] as! Int
+                //update gauge
+                self.realtimeHeartRateGaugueUpdateFunc(result)
+                
+                //Prepare the next request
                 let newStartTime = heartDataArr[lastIndex][0] as! Int
                 let newEndTime:Int = newStartTime + ( 24 * 60 * 60 * 256)
-                print("Here's the \(lastIndex) index: \(heartDataArr[lastIndex])")
                 self.url = "https://api.hexoskin.com/api/data/?record=\(self.realtimeRecordId)"
                     + "&datatype=\(self.hxDatatype.heartRate)"
                     + "&start=\(newStartTime)"
@@ -160,7 +168,8 @@ class HexoskinAPIRequest : NSObject {
         }
     }
     
-    internal func getRealtimeData() {
+    internal func getRealtimeData( completion: (rate: Int)->Void ) {
+        self.realtimeHeartRateGaugueUpdateFunc = completion
         self.url = "https://api.hexoskin.com/api/user/"
         self.createHeaders()
         //Get user info
@@ -198,7 +207,7 @@ class HexoskinAPIRequest : NSObject {
                             + "&end=\(endTime)"
                             self.createHeaders()
                             // Initialize timer to get data
-                            self.realtimeTimer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "getRealtimeUpdate:", userInfo: nil, repeats: true)
+                            self.realtimeTimer = NSTimer.scheduledTimerWithTimeInterval(self.timerInterval, target: self, selector: "getRealtimeUpdate:", userInfo: nil, repeats: true)
 
                         }
                         else {
@@ -233,17 +242,6 @@ class HexoskinAPIRequest : NSObject {
                 
         }
         
-    }
-    
-    
-    
-    internal func getRealtimeBreathingRate() {
-        //1. Get User Info
-        Alamofire.request(.GET, "https://httpbin.org/get", headers: self.headers)
-            .responseString { response in
-                print("Success: \(response.result.isSuccess)")
-                print("Response String: \(response.result.value)")
-                        }
     }
 
 }

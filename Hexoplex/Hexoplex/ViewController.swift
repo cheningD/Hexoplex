@@ -29,7 +29,34 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     @IBOutlet var heart_gauge: Gauge!
     @IBOutlet weak var heartMonitor: UIImageView!
-    @IBAction func heartSlider(sender: UISlider) {
+    
+    
+    // Updates heart gaugue in background
+    func displayRealtimeHeartRate(rate: Int){
+        print("Inside the completion")
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            print("Inside the completion sync thred")
+            self.heart_gauge.rate = CGFloat(rate)
+            let heartString = Int(rate)
+            self.heartText.text = "\(heartString) BPM"
+            
+            if ( rate > 150 && rate < 165)
+            {
+                self.heartTile.backgroundColor = UIColor.yellowColor()
+            }
+            else if (rate > 165)
+            {
+                self.heartTile.backgroundColor = UIColor.redColor()
+            }
+            else
+            {
+                self.heartTile.backgroundColor = UIColor.greenColor()
+            }
+        })
+    }
+    
+    /*@IBAction func heartSlider(sender: UISlider) {
         heart_gauge.rate = CGFloat(sender.value)
         let heartString = Int(sender.value)
         self.heartText.text = "\(heartString) BPM"
@@ -46,7 +73,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         {
             heartTile.backgroundColor = UIColor.greenColor()
         }
-    }
+    }*/
     
     @IBOutlet var lung_gauge: Gauge!
     @IBOutlet weak var BeathMonitor: UIImageView!
@@ -96,6 +123,11 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         
         lungTile.layer.cornerRadius = 30.0
         lungTile.layer.opacity = 25.0
+        
+        
+        // Make request for vitals
+        let myUser = HexoskinAPIRequest(username: "cdduker@gmail.com", password: "r33ltime")
+        myUser.getRealtimeData( displayRealtimeHeartRate )
         
     }
 
