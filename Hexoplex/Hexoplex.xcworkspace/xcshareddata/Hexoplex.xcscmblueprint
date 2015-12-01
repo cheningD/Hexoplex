@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8DD3B6949676508BB111A1E14BA93611807F138D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8DD3B6949676508BB111A1E14BA93611807F138D" : 0,
+    "D316725E3745C2E3F6B4E61E23722FBEC4818660" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "448AD483-2201-4108-A912-AAAA1F31B055",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8DD3B6949676508BB111A1E14BA93611807F138D" : "Hexoplex",
+    "D316725E3745C2E3F6B4E61E23722FBEC4818660" : "Hexoplex\/GaugeKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Hexoplex",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Hexoplex\/Hexoplex.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cheningD\/Hexoplex.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8DD3B6949676508BB111A1E14BA93611807F138D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/skywinder\/GaugeKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D316725E3745C2E3F6B4E61E23722FBEC4818660"
+    }
+  ]
+}

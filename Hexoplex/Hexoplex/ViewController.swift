@@ -16,8 +16,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     @IBOutlet weak var paddinglabel: UILabel!
     
     @IBOutlet var heartTile: UIView!
-    @IBOutlet var lungTile: UIView!
     
+    @IBOutlet var lungTile: UIView!
     
     //Text below heart and lung gauges
     @IBOutlet weak var heartText: UILabel!
@@ -29,24 +29,31 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     @IBOutlet var heart_gauge: Gauge!
     @IBOutlet weak var heartMonitor: UIImageView!
-    @IBAction func heartSlider(sender: UISlider) {
-        heart_gauge.rate = CGFloat(sender.value)
-        let heartString = Int(sender.value)
-        self.heartText.text = "\(heartString) BPM"
+    
+    func displayRealtimeHeartRate(rate: Int){
+        print("Inside the completion")
         
-        if(sender.value > 150 && sender.value < 165)
-        {
-            heartTile.backgroundColor = UIColor.yellowColor()
-        }
-        else if(sender.value > 165)
-        {
-            heartTile.backgroundColor = UIColor.redColor()
-        }
-        else
-        {
-            heartTile.backgroundColor = UIColor.greenColor()
-        }
+        dispatch_async(dispatch_get_main_queue(), {
+            print("Inside the completion sync thred")
+            self.heart_gauge.rate = CGFloat(rate)
+            let heartString = Int(rate)
+            self.heartText.text = "\(heartString) BPM"
+            
+            if ( rate > 150 && rate < 165)
+            {
+                self.heartTile.backgroundColor = UIColor(red:1.00, green:0.60, blue:0.20, alpha:1.0)
+            }
+            else if (rate > 165)
+            {
+                self.heartTile.backgroundColor = UIColor(red:1.00, green:0.20, blue:0.20, alpha:1.0)
+            }
+            else
+            {
+                self.heartTile.backgroundColor = UIColor(red:0.30, green:1.00, blue:0.30, alpha:1.0)
+            }
+        })
     }
+
     
     @IBOutlet var lung_gauge: Gauge!
     @IBOutlet weak var BeathMonitor: UIImageView!
@@ -57,15 +64,15 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         
         if(sender.value > 40 && sender.value < 45)
         {
-            lungTile.backgroundColor = UIColor.yellowColor()
+            lungTile.backgroundColor = UIColor(red:1.00, green:0.60, blue:0.20, alpha:1.0)
         }
         else if(sender.value > 45)
         {
-            lungTile.backgroundColor = UIColor.redColor()
+            lungTile.backgroundColor = UIColor(red:1.00, green:0.20, blue:0.20, alpha:1.0)
         }
         else
         {
-            lungTile.backgroundColor = UIColor.greenColor()
+            lungTile.backgroundColor = UIColor(red:0.30, green:1.00, blue:0.30, alpha:1.0)
         }
         
     }
@@ -73,12 +80,13 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
 
     //Navigation buttons at bottom of screen
-    @IBAction func ExerciseIsClicked(sender: UIBarButtonItem) {
-        self.performSegueWithIdentifier("StatsToExercises", sender: sender)
+
+    @IBAction func exerciseClicked(sender: AnyObject) {
+        self.performSegueWithIdentifier("StatsToExercises", sender: self)
     }
     
-    @IBAction func SettingsIsClicked(sender: UIBarButtonItem) {
-        self.performSegueWithIdentifier("StatsToSettings", sender: sender)
+    @IBAction func settingsClicked(sender: AnyObject) {
+        self.performSegueWithIdentifier("StatsToSettings", sender: self)
     }
     
     override func viewDidLoad() {
@@ -96,6 +104,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         
         lungTile.layer.cornerRadius = 30.0
         lungTile.layer.opacity = 25.0
+        
+        //Make requests
+        let myUser = HexoskinAPIRequest(username: "cdduker@gmail.com", password: "r33ltime")
+        myUser.getRealtimeData( displayRealtimeHeartRate )
         
     }
 
@@ -123,13 +135,16 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "heartHistory"
         {
-            if let controller = segue.destinationViewController as? UIViewController
+            
+            if let controller2 = segue.destinationViewController as? UIViewController
             {
-                controller.popoverPresentationController!.delegate = self
-                controller.preferredContentSize = CGSize(width: 400, height: 300)
+                controller2.popoverPresentationController!.delegate = self
+                controller2.preferredContentSize = CGSize(width: 400, height: 300)
             }
+
         }
         
         if segue.identifier == "lungHistory"

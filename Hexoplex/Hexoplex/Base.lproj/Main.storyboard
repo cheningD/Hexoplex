@@ -17,40 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-Ud-W7Y" userLabel="lungTile">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-Ud-W7Y" userLabel="lungTile">
                                 <rect key="frame" x="85" y="345" width="242" height="233"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lungsNew" translatesAutoresizingMaskIntoConstraints="NO" id="F9T-nw-OxS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lungsNew" translatesAutoresizingMaskIntoConstraints="NO" id="F9T-nw-OxS">
                                 <rect key="frame" x="146" y="407" width="121" height="110"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MiL-gj-gBu">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiL-gj-gBu">
                                 <rect key="frame" x="-2" y="20" width="416" height="44"/>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Hexoplex" id="eMw-WL-2u5"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3k-kJ-k75">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3k-kJ-k75">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W95-r2-Mqf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W95-r2-Mqf">
                                 <rect key="frame" x="153" y="505" width="104" height="43"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="G1m-2O-1Yl">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="G1m-2O-1Yl">
                                 <rect key="frame" x="112" y="639" width="191" height="31"/>
                                 <connections>
                                     <action selector="LungSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="2sr-oM-heB"/>
                                 </connections>
                             </slider>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QE3-hd-Hid" customClass="Gauge" customModule="GaugeKit">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QE3-hd-Hid" customClass="Gauge" customModule="GaugeKit">
                                 <rect key="frame" x="76" y="345" width="260" height="233"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -74,45 +74,39 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ThS-Je-cHj">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThS-Je-cHj">
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Settings" style="done" id="Cjj-Hz-jRU">
                                         <color key="tintColor" red="0.086274509803921567" green="0.25490196078431371" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <action selector="SettingsIsClicked:" destination="BYZ-38-t0r" id="ojF-dd-sOF"/>
+                                            <action selector="settingsClicked:" destination="BYZ-38-t0r" id="hkn-A3-L1k"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="247" style="plain" systemItem="fixedSpace" id="9V6-Y7-clf"/>
+                                    <barButtonItem width="240" style="plain" systemItem="fixedSpace" id="9V6-Y7-clf"/>
                                     <barButtonItem title="Exercises" style="done" id="etM-Tv-RJa">
                                         <color key="tintColor" red="0.086274509803921567" green="0.25490196078431371" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <action selector="ExerciseIsClicked:" destination="BYZ-38-t0r" id="SOF-tO-vnC"/>
+                                            <action selector="exerciseClicked:" destination="BYZ-38-t0r" id="nM0-sC-fiw"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="ie6-pZ-8pL">
-                                <rect key="frame" x="112" y="601" width="191" height="31"/>
-                                <connections>
-                                    <action selector="heartSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="GTf-Kv-GiP"/>
-                                </connections>
-                            </slider>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fO-t2-8Am" userLabel="heartTile">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fO-t2-8Am" userLabel="heartTile">
                                 <rect key="frame" x="85" y="94" width="242" height="237"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart_icon" translatesAutoresizingMaskIntoConstraints="NO" id="NKK-Zb-Lge">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_icon" translatesAutoresizingMaskIntoConstraints="NO" id="NKK-Zb-Lge">
                                 <rect key="frame" x="145" y="153" width="122" height="120"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDz-1N-SBY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDz-1N-SBY">
                                 <rect key="frame" x="154" y="257" width="104" height="43"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dx-53-3er" customClass="Gauge" customModule="GaugeKit">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dx-53-3er" customClass="Gauge" customModule="GaugeKit">
                                 <rect key="frame" x="85" y="94" width="242" height="237"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -139,7 +133,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkj-Nv-LCt" userLabel="heartButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkj-Nv-LCt" userLabel="heartButton">
                                 <rect key="frame" x="85" y="94" width="242" height="237"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -148,7 +142,7 @@
                                     <action selector="heartTileClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F35-ow-Tfa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFq-24-4bC" userLabel="lungButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFq-24-4bC" userLabel="lungButton">
                                 <rect key="frame" x="85" y="345" width="242" height="233"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,6 +150,12 @@
                                 <connections>
                                     <action selector="lungTileClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yyr-cM-L6b"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHN-ZQ-54F">
+                                <rect key="frame" x="206" y="308" width="30" height="30"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0A-9f-OSP">
+                                <rect key="frame" x="206" y="384" width="30" height="15"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -165,6 +165,7 @@
                             <outletCollection property="gestureRecognizers" destination="aWR-HD-AP3" appends="YES" id="XAu-Ji-jRO"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="LNN-bV-Hc1"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="heartText" destination="cDz-1N-SBY" id="lpn-vd-rEt"/>
@@ -175,12 +176,12 @@
                         <outlet property="lung_gauge" destination="QE3-hd-Hid" id="Wsz-bi-h4e"/>
                         <outlet property="navBar" destination="MiL-gj-gBu" id="pdP-b1-bgR"/>
                         <outlet property="paddinglabel" destination="g3k-kJ-k75" id="0rf-7N-Q3R"/>
-                        <segue destination="MlA-nl-dYt" kind="presentation" identifier="StatsToExercises" modalTransitionStyle="flipHorizontal" id="Sym-pK-u3w"/>
-                        <segue destination="7vS-im-REf" kind="presentation" identifier="StatsToSettings" modalTransitionStyle="flipHorizontal" id="FrF-rw-jbN"/>
-                        <segue destination="vyh-4K-hTN" kind="popoverPresentation" identifier="heartHistory" popoverAnchorView="Nkj-Nv-LCt" id="GYT-AP-p1W">
+                        <segue destination="MlA-nl-dYt" kind="push" identifier="StatsToExercises" id="Sym-pK-u3w"/>
+                        <segue destination="7vS-im-REf" kind="push" identifier="StatsToSettings" id="FrF-rw-jbN"/>
+                        <segue destination="vyh-4K-hTN" kind="popoverPresentation" identifier="heartHistory" popoverAnchorView="AHN-ZQ-54F" id="GYT-AP-p1W">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
-                        <segue destination="b5j-NX-rEL" kind="popoverPresentation" identifier="lungHistory" popoverAnchorView="rFq-24-4bC" id="s1V-x0-keN">
+                        <segue destination="b5j-NX-rEL" kind="popoverPresentation" identifier="lungHistory" popoverAnchorView="b0A-9f-OSP" id="s1V-x0-keN">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
                     </connections>
@@ -199,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="431" y="477"/>
         </scene>
-        <!--View Controller-->
+        <!--Data Source-->
         <scene sceneID="twb-SG-t6M">
             <objects>
-                <viewController id="vyh-4K-hTN" sceneMemberID="viewController">
+                <viewController id="vyh-4K-hTN" customClass="HeartHistory" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bJO-O3-D7e"/>
                         <viewControllerLayoutGuide type="bottom" id="QNg-0A-cJu"/>
@@ -211,17 +212,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2015-11-17 at 9.44.58 PM" translatesAutoresizingMaskIntoConstraints="NO" id="AU1-om-hNV">
-                                <rect key="frame" x="44" y="0.0" width="312" height="300"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Er-2p-MYM" userLabel="Heart Graph" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beats Per Minute History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-BF-2Zh">
+                                        <rect key="frame" x="105" y="8" width="190" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorTop">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorLine">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorBottom">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorPoint">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vyh-4K-hTN" id="JJq-nV-cth"/>
+                                    <outlet property="delegate" destination="vyh-4K-hTN" id="tU4-Zq-W9o"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Er-2p-MYM" firstAttribute="bottom" secondItem="QNg-0A-cJu" secondAttribute="top" id="4AX-t2-9he"/>
+                            <constraint firstItem="1Er-2p-MYM" firstAttribute="top" secondItem="bJO-O3-D7e" secondAttribute="bottom" id="CLC-h0-eO5"/>
+                            <constraint firstAttribute="trailing" secondItem="1Er-2p-MYM" secondAttribute="trailing" id="c44-kT-9MT"/>
+                            <constraint firstItem="1Er-2p-MYM" firstAttribute="leading" secondItem="DBZ-tG-30j" secondAttribute="leading" id="mXM-kT-5fP"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableBezierCurve" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="400" height="300"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="300"/>
+                    <connections>
+                        <outlet property="myGraph" destination="1Er-2p-MYM" id="a5g-6b-2WG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ZT-pu-XSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,22 +318,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.10980392160000001" green="0.33333333329999998" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="f5o-UE-nRY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="debugText" destination="aWf-6T-Mgm" id="Vl3-Mv-CrI"/>
                         <outlet property="navBar" destination="COO-Tg-Auj" id="DQh-j7-GLT"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="SettingsToStats" modalTransitionStyle="flipHorizontal" id="hNG-NF-E2V"/>
-                        <segue destination="MlA-nl-dYt" kind="presentation" identifier="SettingsToExercises" modalTransitionStyle="flipHorizontal" id="P7t-of-tz7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oed-Cp-M31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="956" y="99"/>
         </scene>
-        <!--View Controller-->
+        <!--Data Source-->
         <scene sceneID="qto-5R-C8Z">
             <objects>
-                <viewController id="b5j-NX-rEL" sceneMemberID="viewController">
+                <viewController id="b5j-NX-rEL" customClass="LungHistory" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AXH-Dm-hFS"/>
                         <viewControllerLayoutGuide type="bottom" id="6sq-gD-BKm"/>
@@ -302,9 +341,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2015-11-17 at 9.45.23 PM" translatesAutoresizingMaskIntoConstraints="NO" id="LjN-cn-P9V">
-                                <rect key="frame" x="58" y="0.0" width="300" height="300"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dE-4N-BF9" userLabel="LungGraph" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathes Per Minute History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOZ-96-O3m">
+                                        <rect key="frame" x="93" y="8" width="215" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorTop">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorPoint">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorLine">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="b5j-NX-rEL" id="8gV-TM-Ue4"/>
+                                    <outlet property="delegate" destination="b5j-NX-rEL" id="kfP-ir-lfp"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -313,6 +376,9 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="300"/>
+                    <connections>
+                        <outlet property="myGraph" destination="1dE-4N-BF9" id="xyJ-1o-hS2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMh-BG-c26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -369,8 +435,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="navbar" destination="F8e-sj-bLZ" id="rKL-m8-eew"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ExercisesToStats" modalTransitionStyle="flipHorizontal" id="F1N-zr-AbI"/>
-                        <segue destination="7vS-im-REf" kind="presentation" identifier="ExercisesToSettings" modalTransitionStyle="flipHorizontal" id="i3W-8h-MF6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VID-zd-sGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -380,14 +444,7 @@
     </scenes>
     <resources>
         <image name="12248856_10153323291130897_1642467111_n" width="248" height="384"/>
-        <image name="Screen Shot 2015-11-17 at 9.44.58 PM" width="415" height="432"/>
-        <image name="Screen Shot 2015-11-17 at 9.45.23 PM" width="414" height="435"/>
         <image name="heart_icon" width="512" height="512"/>
         <image name="lungsNew" width="512" height="512"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="hNG-NF-E2V"/>
-        <segue reference="FrF-rw-jbN"/>
-        <segue reference="Sym-pK-u3w"/>
-    </inferredMetricsTieBreakers>
 </document>

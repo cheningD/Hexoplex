@@ -9,17 +9,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>BEMSimpleLineGraph.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>CryptoSwift.xcscheme</key>
+		<key>FLKAutoLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FLKAutoLayout.xcscheme</key>
+		<key>GaugeKit-GaugeKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GaugeKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,7 +52,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0CC3AC85291D76DF4348A46011097C3C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>122253C62F330ED922A7C46D47CF8DC2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4878C70B21CA37D7CB8A476BF986741B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>778955463C5A440685485F538F969211</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -63,6 +93,11 @@
 			<true/>
 		</dict>
 		<key>A34CA2CDCA33A9CF24A09EA980F8EDEE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B06350527FB71D9668EA74F0BB3FC149</key>
 		<dict>
 			<key>primary</key>
 			<true/>

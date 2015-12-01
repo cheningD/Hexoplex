@@ -8,12 +8,12 @@
 
 #import "HeartHistory.h"
 
-@interface ViewController () {
+@interface HeartHistory () {
     int previousStepperValue;
     int totalNumber;
 } @end
 
-@implementation ViewController
+@implementation HeartHistory
 
 #pragma mark - View Lifecycle
 
@@ -22,12 +22,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [self hydrateDatasets];
-    
-    /* This is commented out because the graph is created in the interface with this sample app. However, the code remains as an example for creating the graph using code.
-     BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 60, 320, 250)];
-     myGraph.delegate = self;
-     myGraph.dataSource = self;
-     [self.view addSubview:myGraph]; */
     
     // Create a gradient to apply to the bottom portion of the graph
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
@@ -46,10 +40,11 @@
     self.myGraph.enablePopUpReport = YES;
     self.myGraph.enableYAxisLabel = YES;
     self.myGraph.autoScaleYAxis = YES;
-    self.myGraph.alwaysDisplayDots = NO;
+    self.myGraph.alwaysDisplayDots = YES;
     self.myGraph.enableReferenceXAxisLines = YES;
     self.myGraph.enableReferenceYAxisLines = YES;
     self.myGraph.enableReferenceAxisFrame = YES;
+    self.myGraph.enableBezierCurve = YES;
     
     // Draw an average line
     self.myGraph.averageLine.enableAverageLine = YES;
@@ -186,7 +181,7 @@
  } */
 
 - (NSString *)popUpSuffixForlineGraph:(BEMSimpleLineGraphView *)graph {
-    return @" people";
+    return @" panic attack";
 }
 
 //- (NSString *)popUpPrefixForlineGraph:(BEMSimpleLineGraphView *)graph {
