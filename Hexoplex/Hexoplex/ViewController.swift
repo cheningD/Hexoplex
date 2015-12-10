@@ -31,12 +31,11 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     @IBOutlet weak var heartMonitor: UIImageView!
     
     
-    // Updates heart gaugue in background
+    // Updates HEART gaugue in background
     func displayRealtimeHeartRate(rate: Int){
-        print("Inside the completion")
         
         dispatch_async(dispatch_get_main_queue(), {
-            print("Inside the completion sync thred")
+            print("Heart Gaugue Update")
             self.heart_gauge.rate = CGFloat(rate)
             let heartString = Int(rate)
             self.heartText.text = "\(heartString) BPM"
@@ -55,6 +54,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             }
         })
     }
+    
     
     /*@IBAction func heartSlider(sender: UISlider) {
         heart_gauge.rate = CGFloat(sender.value)
@@ -77,7 +77,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     @IBOutlet var lung_gauge: Gauge!
     @IBOutlet weak var BeathMonitor: UIImageView!
-    @IBAction func LungSlider(sender: UISlider) {
+    /*@IBAction func LungSlider(sender: UISlider) {
         lung_gauge.rate = CGFloat(sender.value)
         let lungString = Int(sender.value)
         self.lungText.text = "\(lungString) BPM"
@@ -95,6 +95,29 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             lungTile.backgroundColor = UIColor.greenColor()
         }
         
+    }*/
+    // Updates LUNG gaugue in background
+    func displayRealtimeLungRate(rate: Int){
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            print("Lung Gaugue Update")
+            self.lung_gauge.rate = CGFloat(rate)
+            let lungString = Int(rate)
+            self.lungText.text = "\(lungString) BPM"
+            
+            if ( rate > 40 && rate < 45)
+            {
+                self.lungTile.backgroundColor = UIColor.yellowColor()
+            }
+            else if (rate > 45)
+            {
+                self.lungTile.backgroundColor = UIColor.redColor()
+            }
+            else
+            {
+                self.lungTile.backgroundColor = UIColor.greenColor()
+            }
+        })
     }
     
     
@@ -127,7 +150,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         
         // Make request for vitals
         let myUser = HexoskinAPIRequest(username: "cdduker@gmail.com", password: "r33ltime")
-        myUser.getRealtimeData( displayRealtimeHeartRate )
+        myUser.getRealtimeData(displayRealtimeHeartRate, lungCompletion: displayRealtimeLungRate)
         
     }
 

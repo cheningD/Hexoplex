@@ -29,7 +29,7 @@ class ViewController3: UIViewController {
         
 
         //let user = HexoskinAPIRequest(username: "athlete@hexoskin.com", password: "hexoskin")
-        let user = HexoskinAPIRequest(username: "cdduker@gmail.com", password: "oregon17")
+        let user = HexoskinAPIRequest(username: "cdduker@gmail.com", password: "r33ltime")
         
         // This function diaplays the user info recieved from the API request
         // getUserInfo(). dispatch_async makes sure this operation is done in 
@@ -37,13 +37,19 @@ class ViewController3: UIViewController {
         func displayUserInfo(info: NSDictionary){
 
             dispatch_async(dispatch_get_main_queue(), {
-                let infoText =
+                var infoText:String  = ""
+                if (info["error"] != nil){
+                    infoText = String(info["error"]!)
+                }
+                else {
+                    infoText =
                         "email " + String(info["email"]!)
                         + "\n first_name " + String(info["first_name"]!)
                         + "\n last_name " + String(info["last_name"]!)
                         + "\n id " + String(info["id"]!)
                         + "\n profile " + String(info["profile"]!)
                         + "\n username " + String(info["username"]!)
+                }
                 self.debugText.text = infoText
             })
         }
