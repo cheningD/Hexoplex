@@ -59,6 +59,7 @@ class HexoskinAPIRequest : NSObject {
         let decodedString = NSString(data: decodedData!, encoding: NSUTF8StringEncoding)
         //print("DEBUG: HexoskinAPIUser base64 decode: " + base64String + " --> " + String(decodedString))
     return String(decodedString);
+    }
 
     private func createHeaders(){
         var basicAuth = username + ":" + password
