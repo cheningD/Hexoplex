@@ -1,20 +1,20 @@
 //
-//  HeartHistory.h
+//  LungHistory.h
 //  Hexoplex
 //
-//  Created by Paul Skorski on 11/17/15.
+//  Created by Paul Skorski on 11/27/15.
 //  Copyright © 2015 Yeshwanth Devabhaktuni. All rights reserved.
 //
 
-#ifndef HeartHistory_h
-#define HeartHistory_h
+#ifndef LungHistory_h
+#define LungHistory_h
 
 
-#endif /* HeartHistory_h */
+#endif /* LungHistory_h */
 
 #import "BEMSimpleLineGraphView.h"
 
-@interface HeartHistory : UIViewController <BEMSimpleLineGraphDataSource, BEMSimpleLineGraphDelegate>
+@interface LungHistory : UIViewController <BEMSimpleLineGraphDataSource, BEMSimpleLineGraphDelegate>
 
 @property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *myGraph;
 

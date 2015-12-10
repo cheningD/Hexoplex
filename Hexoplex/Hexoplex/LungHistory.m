@@ -1,4 +1,13 @@
 //
+//  LungHistory.m
+//  Hexoplex
+//
+//  Created by Paul Skorski on 11/27/15.
+//  Copyright © 2015 Yeshwanth Devabhaktuni. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+//
 //  HeartHistory.m
 //  Hexoplex
 //
@@ -6,14 +15,14 @@
 //  Copyright © 2015 Yeshwanth Devabhaktuni. All rights reserved.
 //
 
-#import "HeartHistory.h"
+#import "LungHistory.h"
 
-@interface HeartHistory () {
+@interface LungHistory() {
     int previousStepperValue;
     int totalNumber;
 } @end
 
-@implementation HeartHistory
+@implementation LungHistory
 
 #pragma mark - View Lifecycle
 
@@ -181,7 +190,7 @@
  } */
 
 - (NSString *)popUpSuffixForlineGraph:(BEMSimpleLineGraphView *)graph {
-    return @" panic attack";
+    return @" people";
 }
 
 //- (NSString *)popUpPrefixForlineGraph:(BEMSimpleLineGraphView *)graph {

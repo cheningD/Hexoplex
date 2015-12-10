@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0DD23F2A2C17C8AE0CF4D20F'
-               BlueprintName = 'Pods-Hexoplex'
+               BlueprintIdentifier = '8EFE3D2B028BD33D0E834575'
+               BlueprintName = 'GaugeKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_Hexoplex.framework'>
+               BuildableName = 'GaugeKit.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

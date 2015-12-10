@@ -138,13 +138,21 @@ $ git submodule add https://github.com/Alamofire/Alamofire.git
 ```swift
 import Alamofire
 
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get")
+=======
+Alamofire.request(.GET, "https://httpbin.org/get")
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 ```
 
 ### Response Handling
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
+=======
+Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .responseJSON { response in
              print(response.request)  // original URL request
              print(response.response) // URL response
@@ -174,7 +182,11 @@ Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
 #### Response Handler
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
+=======
+Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .response { request, response, data, error in
              print(request)
              print(response)
@@ -188,7 +200,11 @@ Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
 #### Response Data Handler
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
+=======
+Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .responseData { response in
              print(response.request)
              print(response.response)
@@ -199,7 +215,11 @@ Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
 #### Response String Handler
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get")
+=======
+Alamofire.request(.GET, "https://httpbin.org/get")
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .responseString { response in
              print("Success: \(response.result.isSuccess)")
              print("Response String: \(response.result.value)")
@@ -209,7 +229,11 @@ Alamofire.request(.GET, "http://httpbin.org/get")
 #### Response JSON Handler
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get")
+=======
+Alamofire.request(.GET, "https://httpbin.org/get")
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .responseJSON { response in
              debugPrint(response)
          }
@@ -220,7 +244,11 @@ Alamofire.request(.GET, "http://httpbin.org/get")
 Response handlers can even be chained:
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get")
+=======
+Alamofire.request(.GET, "https://httpbin.org/get")
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .responseString { response in
              print("Response String: \(response.result.value)")
          }
@@ -242,11 +270,19 @@ public enum Method: String {
 These values can be passed as the first argument of the `Alamofire.request` method:
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.POST, "http://httpbin.org/post")
 
 Alamofire.request(.PUT, "http://httpbin.org/put")
 
 Alamofire.request(.DELETE, "http://httpbin.org/delete")
+=======
+Alamofire.request(.POST, "https://httpbin.org/post")
+
+Alamofire.request(.PUT, "https://httpbin.org/put")
+
+Alamofire.request(.DELETE, "https://httpbin.org/delete")
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 ```
 
 ### Parameters
@@ -254,8 +290,13 @@ Alamofire.request(.DELETE, "http://httpbin.org/delete")
 #### GET Request With URL-Encoded Parameters
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
 // http://httpbin.org/get?foo=bar
+=======
+Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+// https://httpbin.org/get?foo=bar
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 ```
 
 #### POST Request With URL-Encoded Parameters
@@ -271,7 +312,11 @@ let parameters = [
     ]
 ]
 
+<<<<<<< HEAD
 Alamofire.request(.POST, "http://httpbin.org/post", parameters: parameters)
+=======
+Alamofire.request(.POST, "https://httpbin.org/post", parameters: parameters)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 // HTTP body: foo=bar&baz[]=a&baz[]=1&qux[x]=1&qux[y]=2&qux[z]=3
 ```
 
@@ -301,7 +346,11 @@ enum ParameterEncoding {
 #### Manual Parameter Encoding of an NSURLRequest
 
 ```swift
+<<<<<<< HEAD
 let URL = NSURL(string: "http://httpbin.org/get")!
+=======
+let URL = NSURL(string: "https://httpbin.org/get")!
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 var request = NSMutableURLRequest(URL: URL)
 
 let parameters = ["foo": "bar"]
@@ -319,7 +368,11 @@ let parameters = [
     ]
 ]
 
+<<<<<<< HEAD
 Alamofire.request(.POST, "http://httpbin.org/post", parameters: parameters, encoding: .JSON)
+=======
+Alamofire.request(.POST, "https://httpbin.org/post", parameters: parameters, encoding: .JSON)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 // HTTP body: {"foo": [1, 2, 3], "bar": {"baz": "qux"}}
 ```
 
@@ -335,7 +388,11 @@ let headers = [
     "Content-Type": "application/x-www-form-urlencoded"
 ]
 
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get", headers: headers)
+=======
+Alamofire.request(.GET, "https://httpbin.org/get", headers: headers)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .responseJSON { response in
              debugPrint(response)
          }
@@ -358,13 +415,21 @@ Caching is handled on the system framework level by [`NSURLCache`](https://devel
 
 ```swift
 let fileURL = NSBundle.mainBundle().URLForResource("Default", withExtension: "png")
+<<<<<<< HEAD
 Alamofire.upload(.POST, "http://httpbin.org/post", file: fileURL)
+=======
+Alamofire.upload(.POST, "https://httpbin.org/post", file: fileURL)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 ```
 
 #### Uploading with Progress
 
 ```swift
+<<<<<<< HEAD
 Alamofire.upload(.POST, "http://httpbin.org/post", file: fileURL)
+=======
+Alamofire.upload(.POST, "https://httpbin.org/post", file: fileURL)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .progress { bytesWritten, totalBytesWritten, totalBytesExpectedToWrite in
              print(totalBytesWritten)
 
@@ -384,7 +449,11 @@ Alamofire.upload(.POST, "http://httpbin.org/post", file: fileURL)
 ```swift
 Alamofire.upload(
     .POST,
+<<<<<<< HEAD
     "http://httpbin.org/post",
+=======
+    "https://httpbin.org/post",
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
     multipartFormData: { multipartFormData in
         multipartFormData.appendBodyPart(fileURL: unicornImageURL, name: "unicorn")
         multipartFormData.appendBodyPart(fileURL: rainbowImageURL, name: "rainbow")
@@ -412,7 +481,11 @@ Alamofire.upload(
 #### Downloading a File
 
 ```swift
+<<<<<<< HEAD
 Alamofire.download(.GET, "http://httpbin.org/stream/100") { temporaryURL, response in
+=======
+Alamofire.download(.GET, "https://httpbin.org/stream/100") { temporaryURL, response in
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
     let fileManager = NSFileManager.defaultManager()
     let directoryURL = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
     let pathComponent = response.suggestedFilename
@@ -425,13 +498,21 @@ Alamofire.download(.GET, "http://httpbin.org/stream/100") { temporaryURL, respon
 
 ```swift
 let destination = Alamofire.Request.suggestedDownloadDestination(directory: .DocumentDirectory, domain: .UserDomainMask)
+<<<<<<< HEAD
 Alamofire.download(.GET, "http://httpbin.org/stream/100", destination: destination)
+=======
+Alamofire.download(.GET, "https://httpbin.org/stream/100", destination: destination)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 ```
 
 #### Downloading a File w/Progress
 
 ```swift
+<<<<<<< HEAD
 Alamofire.download(.GET, "http://httpbin.org/stream/100", destination: destination)
+=======
+Alamofire.download(.GET, "https://httpbin.org/stream/100", destination: destination)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .progress { bytesRead, totalBytesRead, totalBytesExpectedToRead in
              print(totalBytesRead)
 
@@ -453,7 +534,11 @@ Alamofire.download(.GET, "http://httpbin.org/stream/100", destination: destinati
 #### Accessing Resume Data for Failed Downloads
 
 ```swift
+<<<<<<< HEAD
 Alamofire.download(.GET, "http://httpbin.org/stream/100", destination: destination)
+=======
+Alamofire.download(.GET, "https://httpbin.org/stream/100", destination: destination)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .response { _, _, data, _ in
              if let
                  data = data,
@@ -469,7 +554,11 @@ Alamofire.download(.GET, "http://httpbin.org/stream/100", destination: destinati
 > The `data` parameter is automatically populated with the `resumeData` if available.
 
 ```swift
+<<<<<<< HEAD
 let download = Alamofire.download(.GET, "http://httpbin.org/stream/100", destination: destination)
+=======
+let download = Alamofire.download(.GET, "https://httpbin.org/stream/100", destination: destination)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 download.response { _, _, _, _ in
     if let
         resumeData = download.resumeData,
@@ -519,7 +608,11 @@ let base64Credentials = credentialData.base64EncodedStringWithOptions([])
 
 let headers = ["Authorization": "Basic \(base64Credentials)"]
 
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/basic-auth/user/password", headers: headers)
+=======
+Alamofire.request(.GET, "https://httpbin.org/basic-auth/user/password", headers: headers)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .responseJSON { response in
              debugPrint(response)
          }
@@ -547,7 +640,11 @@ By default, Alamofire treats any completed request to be successful, regardless 
 #### Manual Validation
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
+=======
+Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .validate(statusCode: 200..<300)
          .validate(contentType: ["application/json"])
          .response { response in
@@ -560,7 +657,11 @@ Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
 Automatically validates status code within `200...299` range, and that the `Content-Type` header of the response matches the `Accept` header of the request, if one is provided.
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
+=======
+Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
          .validate()
          .responseJSON { response in
              switch response.result {
@@ -575,16 +676,27 @@ Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
 ### Printable
 
 ```swift
+<<<<<<< HEAD
 let request = Alamofire.request(.GET, "http://httpbin.org/ip")
 
 print(request)
 // GET http://httpbin.org/ip (200)
+=======
+let request = Alamofire.request(.GET, "https://httpbin.org/ip")
+
+print(request)
+// GET https://httpbin.org/ip (200)
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 ```
 
 ### DebugPrintable
 
 ```swift
+<<<<<<< HEAD
 let request = Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
+=======
+let request = Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 
 debugPrint(request)
 ```
@@ -596,7 +708,11 @@ $ curl -i \
 	-H "User-Agent: Alamofire" \
 	-H "Accept-Encoding: Accept-Encoding: gzip;q=1.0,compress;q=0.5" \
 	-H "Accept-Language: en;q=1.0,fr;q=0.9,de;q=0.8,zh-Hans;q=0.7,zh-Hant;q=0.6,ja;q=0.5" \
+<<<<<<< HEAD
 	"http://httpbin.org/get?foo=bar"
+=======
+	"https://httpbin.org/get?foo=bar"
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 ```
 
 ---
@@ -620,12 +736,20 @@ Top-level convenience methods like `Alamofire.request` use a shared instance of 
 As such, the following two statements are equivalent:
 
 ```swift
+<<<<<<< HEAD
 Alamofire.request(.GET, "http://httpbin.org/get")
+=======
+Alamofire.request(.GET, "https://httpbin.org/get")
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 ```
 
 ```swift
 let manager = Alamofire.Manager.sharedInstance
+<<<<<<< HEAD
 manager.request(NSURLRequest(URL: NSURL(string: "http://httpbin.org/get")!))
+=======
+manager.request(NSURLRequest(URL: NSURL(string: "https://httpbin.org/get")!))
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 ```
 
 Applications can create managers for background and ephemeral sessions, as well as new managers that customize the default session configuration, such as for default headers (`HTTPAdditionalHeaders`) or timeout interval (`timeoutIntervalForRequest`).
@@ -842,7 +966,11 @@ Alamofire.request(.GET, "http://example.com/users")
 Types adopting the `URLStringConvertible` protocol can be used to construct URL strings, which are then used to construct URL requests. `NSString`, `NSURL`, `NSURLComponents`, and `NSURLRequest` conform to `URLStringConvertible` by default, allowing any of them to be passed as `URLString` parameters to the `request`, `upload`, and `download` methods:
 
 ```swift
+<<<<<<< HEAD
 let string = NSString(string: "http://httpbin.org/post")
+=======
+let string = NSString(string: "https://httpbin.org/post")
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 Alamofire.request(.POST, string)
 
 let URL = NSURL(string: string)!
@@ -879,7 +1007,11 @@ Alamofire.request(.GET, user) // http://example.com/users/mattt
 Types adopting the `URLRequestConvertible` protocol can be used to construct URL requests. `NSURLRequest` conforms to `URLRequestConvertible` by default, allowing it to be passed into `request`, `upload`, and `download` methods directly (this is the recommended way to specify custom HTTP body for individual requests):
 
 ```swift
+<<<<<<< HEAD
 let URL = NSURL(string: "http://httpbin.org/post")!
+=======
+let URL = NSURL(string: "https://httpbin.org/post")!
+>>>>>>> 160befdc04f6e9185144bb52508746ac8adec7c9
 let mutableURLRequest = NSMutableURLRequest(URL: URL)
 mutableURLRequest.HTTPMethod = "POST"
 

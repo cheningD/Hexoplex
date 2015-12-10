@@ -14,13 +14,15 @@
 		2EA6698F1BC3453300364B08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EA6698D1BC3453300364B08 /* LaunchScreen.xib */; };
 		2EA6699B1BC3453300364B08 /* HexoplexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6699A1BC3453300364B08 /* HexoplexTests.swift */; };
 		9701D8AB1BFAC917007CADF2 /* SwiftSha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701D8AA1BFAC917007CADF2 /* SwiftSha.swift */; };
-		9794BE891BFB9BCE00617CCA /* BEMAverageLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE781BFB9BCE00617CCA /* BEMAverageLine.m */; };
-		9794BE8A1BFB9BCE00617CCA /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE7A1BFB9BCE00617CCA /* BEMCircle.m */; };
-		9794BE8B1BFB9BCE00617CCA /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE7C1BFB9BCE00617CCA /* BEMLine.m */; };
-		9794BE8C1BFB9BCE00617CCA /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE7E1BFB9BCE00617CCA /* BEMPermanentPopupView.m */; };
-		9794BE8D1BFB9BCE00617CCA /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE801BFB9BCE00617CCA /* BEMSimpleLineGraphView.m */; };
-		9794BE8F1BFB9BCE00617CCA /* BEMSimpleLineGraph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE831BFB9BCE00617CCA /* BEMSimpleLineGraph-dummy.m */; };
-		9794BE901BFB9BCE00617CCA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9794BE861BFB9BCE00617CCA /* Info.plist */; };
+		977693231C08E61A00000B7D /* BEMAverageLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 977693121C08E61A00000B7D /* BEMAverageLine.m */; };
+		977693241C08E61A00000B7D /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 977693141C08E61A00000B7D /* BEMCircle.m */; };
+		977693251C08E61A00000B7D /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 977693161C08E61A00000B7D /* BEMLine.m */; };
+		977693261C08E61A00000B7D /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977693181C08E61A00000B7D /* BEMPermanentPopupView.m */; };
+		977693271C08E61A00000B7D /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9776931A1C08E61A00000B7D /* BEMSimpleLineGraphView.m */; };
+		977693281C08E61A00000B7D /* BEMSimpleLineGraph.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9776931C1C08E61A00000B7D /* BEMSimpleLineGraph.xcconfig */; };
+		977693291C08E61A00000B7D /* BEMSimpleLineGraph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9776931D1C08E61A00000B7D /* BEMSimpleLineGraph-dummy.m */; };
+		9776932A1C08E61A00000B7D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 977693201C08E61A00000B7D /* Info.plist */; };
+		977693351C09050800000B7D /* LungHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 977693341C09050800000B7D /* LungHistory.m */; };
 		9794BE921BFBB31D00617CCA /* HeartHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9794BE911BFBB31D00617CCA /* HeartHistory.m */; };
 		97FF5BD81BF9593000377BCA /* HexoskinAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FF5BD71BF9593000377BCA /* HexoskinAPIRequest.swift */; };
 		CA36E6BAA517DB1339A9AABC /* Pods_Hexoplex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B53124EDA40BEE5EC43A9E4 /* Pods_Hexoplex.framework */; };
@@ -35,6 +37,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2EA6697E1BC3453300364B08;
 			remoteInfo = Hexoplex;
+		};
+		975884851C0932920014FE61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9776932B1C08E6ED00000B7D /* GaugeKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1C9404D01B31CF85001BF122;
+			remoteInfo = GaugeKit;
+		};
+		975884871C0932920014FE61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9776932B1C08E6ED00000B7D /* GaugeKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1C9404DB1B31CF85001BF122;
+			remoteInfo = GaugeKitTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -65,22 +81,25 @@
 		5B53124EDA40BEE5EC43A9E4 /* Pods_Hexoplex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hexoplex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9701D8AA1BFAC917007CADF2 /* SwiftSha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSha.swift; sourceTree = "<group>"; };
 		9757B1EB1BFAE33C00B07DC9 /* Hexoplex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hexoplex-Bridging-Header.h"; sourceTree = "<group>"; };
-		9794BE771BFB9BCE00617CCA /* BEMAverageLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMAverageLine.h; path = Classes/BEMAverageLine.h; sourceTree = "<group>"; };
-		9794BE781BFB9BCE00617CCA /* BEMAverageLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMAverageLine.m; path = Classes/BEMAverageLine.m; sourceTree = "<group>"; };
-		9794BE791BFB9BCE00617CCA /* BEMCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMCircle.h; path = Classes/BEMCircle.h; sourceTree = "<group>"; };
-		9794BE7A1BFB9BCE00617CCA /* BEMCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMCircle.m; path = Classes/BEMCircle.m; sourceTree = "<group>"; };
-		9794BE7B1BFB9BCE00617CCA /* BEMLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMLine.h; path = Classes/BEMLine.h; sourceTree = "<group>"; };
-		9794BE7C1BFB9BCE00617CCA /* BEMLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMLine.m; path = Classes/BEMLine.m; sourceTree = "<group>"; };
-		9794BE7D1BFB9BCE00617CCA /* BEMPermanentPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMPermanentPopupView.h; path = Classes/BEMPermanentPopupView.h; sourceTree = "<group>"; };
-		9794BE7E1BFB9BCE00617CCA /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMPermanentPopupView.m; path = Classes/BEMPermanentPopupView.m; sourceTree = "<group>"; };
-		9794BE7F1BFB9BCE00617CCA /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMSimpleLineGraphView.h; path = Classes/BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
-		9794BE801BFB9BCE00617CCA /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMSimpleLineGraphView.m; path = Classes/BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
-		9794BE811BFB9BCE00617CCA /* BEMSimpleLineGraph.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = BEMSimpleLineGraph.modulemap; sourceTree = "<group>"; };
-		9794BE821BFB9BCE00617CCA /* BEMSimpleLineGraph.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BEMSimpleLineGraph.xcconfig; sourceTree = "<group>"; };
-		9794BE831BFB9BCE00617CCA /* BEMSimpleLineGraph-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BEMSimpleLineGraph-dummy.m"; sourceTree = "<group>"; };
-		9794BE841BFB9BCE00617CCA /* BEMSimpleLineGraph-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BEMSimpleLineGraph-prefix.pch"; sourceTree = "<group>"; };
-		9794BE851BFB9BCE00617CCA /* BEMSimpleLineGraph-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BEMSimpleLineGraph-umbrella.h"; sourceTree = "<group>"; };
-		9794BE861BFB9BCE00617CCA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		977693111C08E61A00000B7D /* BEMAverageLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMAverageLine.h; path = Classes/BEMAverageLine.h; sourceTree = "<group>"; };
+		977693121C08E61A00000B7D /* BEMAverageLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMAverageLine.m; path = Classes/BEMAverageLine.m; sourceTree = "<group>"; };
+		977693131C08E61A00000B7D /* BEMCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMCircle.h; path = Classes/BEMCircle.h; sourceTree = "<group>"; };
+		977693141C08E61A00000B7D /* BEMCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMCircle.m; path = Classes/BEMCircle.m; sourceTree = "<group>"; };
+		977693151C08E61A00000B7D /* BEMLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMLine.h; path = Classes/BEMLine.h; sourceTree = "<group>"; };
+		977693161C08E61A00000B7D /* BEMLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMLine.m; path = Classes/BEMLine.m; sourceTree = "<group>"; };
+		977693171C08E61A00000B7D /* BEMPermanentPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMPermanentPopupView.h; path = Classes/BEMPermanentPopupView.h; sourceTree = "<group>"; };
+		977693181C08E61A00000B7D /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMPermanentPopupView.m; path = Classes/BEMPermanentPopupView.m; sourceTree = "<group>"; };
+		977693191C08E61A00000B7D /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMSimpleLineGraphView.h; path = Classes/BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
+		9776931A1C08E61A00000B7D /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMSimpleLineGraphView.m; path = Classes/BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
+		9776931B1C08E61A00000B7D /* BEMSimpleLineGraph.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = BEMSimpleLineGraph.modulemap; sourceTree = "<group>"; };
+		9776931C1C08E61A00000B7D /* BEMSimpleLineGraph.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BEMSimpleLineGraph.xcconfig; sourceTree = "<group>"; };
+		9776931D1C08E61A00000B7D /* BEMSimpleLineGraph-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BEMSimpleLineGraph-dummy.m"; sourceTree = "<group>"; };
+		9776931E1C08E61A00000B7D /* BEMSimpleLineGraph-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BEMSimpleLineGraph-prefix.pch"; sourceTree = "<group>"; };
+		9776931F1C08E61A00000B7D /* BEMSimpleLineGraph-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BEMSimpleLineGraph-umbrella.h"; sourceTree = "<group>"; };
+		977693201C08E61A00000B7D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9776932B1C08E6ED00000B7D /* GaugeKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GaugeKit.xcodeproj; path = ../GaugeKit/GaugeKit.xcodeproj; sourceTree = "<group>"; };
+		977693341C09050800000B7D /* LungHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LungHistory.m; sourceTree = "<group>"; };
+		977693361C09051D00000B7D /* LungHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LungHistory.h; sourceTree = "<group>"; };
 		9794BE911BFBB31D00617CCA /* HeartHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartHistory.m; sourceTree = "<group>"; };
 		9794BE931BFBB38400617CCA /* HeartHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartHistory.h; sourceTree = "<group>"; };
 		97FF5BD71BF9593000377BCA /* HexoskinAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexoskinAPIRequest.swift; sourceTree = "<group>"; };
@@ -121,7 +140,7 @@
 		2EA669761BC3453300364B08 = {
 			isa = PBXGroup;
 			children = (
-				9794BE881BFB9BCE00617CCA /* BEMSimpleLineGraph */,
+				977693221C08E61A00000B7D /* BEMSimpleLineGraph */,
 				2EA669811BC3453300364B08 /* Hexoplex */,
 				2EA669971BC3453300364B08 /* HexoplexTests */,
 				2EA669801BC3453300364B08 /* Products */,
@@ -147,9 +166,11 @@
 				9757B1EB1BFAE33C00B07DC9 /* Hexoplex-Bridging-Header.h */,
 				9701D8AA1BFAC917007CADF2 /* SwiftSha.swift */,
 				EBA1DDEB1BD5942700598C05 /* ViewController2.swift */,
-				9794BE911BFBB31D00617CCA /* HeartHistory.m */,
 				EBA1DDED1BD59BE700598C05 /* ViewController3.swift */,
+				977693361C09051D00000B7D /* LungHistory.h */,
+				977693341C09050800000B7D /* LungHistory.m */,
 				9794BE931BFBB38400617CCA /* HeartHistory.h */,
+				9794BE911BFBB31D00617CCA /* HeartHistory.m */,
 				2EA669881BC3453300364B08 /* Main.storyboard */,
 				2EA669861BC3453300364B08 /* ViewController.swift */,
 				2EA6698D1BC3453300364B08 /* LaunchScreen.xib */,
@@ -184,42 +205,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		975884811C0932920014FE61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				975884861C0932920014FE61 /* GaugeKit.framework */,
+				975884881C0932920014FE61 /* GaugeKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		97645D5F345FF93CF49CEBEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9776932B1C08E6ED00000B7D /* GaugeKit.xcodeproj */,
 				5B53124EDA40BEE5EC43A9E4 /* Pods_Hexoplex.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9794BE871BFB9BCE00617CCA /* Support Files */ = {
+		977693211C08E61A00000B7D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9794BE811BFB9BCE00617CCA /* BEMSimpleLineGraph.modulemap */,
-				9794BE821BFB9BCE00617CCA /* BEMSimpleLineGraph.xcconfig */,
-				9794BE831BFB9BCE00617CCA /* BEMSimpleLineGraph-dummy.m */,
-				9794BE841BFB9BCE00617CCA /* BEMSimpleLineGraph-prefix.pch */,
-				9794BE851BFB9BCE00617CCA /* BEMSimpleLineGraph-umbrella.h */,
-				9794BE861BFB9BCE00617CCA /* Info.plist */,
+				9776931B1C08E61A00000B7D /* BEMSimpleLineGraph.modulemap */,
+				9776931C1C08E61A00000B7D /* BEMSimpleLineGraph.xcconfig */,
+				9776931D1C08E61A00000B7D /* BEMSimpleLineGraph-dummy.m */,
+				9776931E1C08E61A00000B7D /* BEMSimpleLineGraph-prefix.pch */,
+				9776931F1C08E61A00000B7D /* BEMSimpleLineGraph-umbrella.h */,
+				977693201C08E61A00000B7D /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/BEMSimpleLineGraph";
 			sourceTree = "<group>";
 		};
-		9794BE881BFB9BCE00617CCA /* BEMSimpleLineGraph */ = {
+		977693221C08E61A00000B7D /* BEMSimpleLineGraph */ = {
 			isa = PBXGroup;
 			children = (
-				9794BE771BFB9BCE00617CCA /* BEMAverageLine.h */,
-				9794BE781BFB9BCE00617CCA /* BEMAverageLine.m */,
-				9794BE791BFB9BCE00617CCA /* BEMCircle.h */,
-				9794BE7A1BFB9BCE00617CCA /* BEMCircle.m */,
-				9794BE7B1BFB9BCE00617CCA /* BEMLine.h */,
-				9794BE7C1BFB9BCE00617CCA /* BEMLine.m */,
-				9794BE7D1BFB9BCE00617CCA /* BEMPermanentPopupView.h */,
-				9794BE7E1BFB9BCE00617CCA /* BEMPermanentPopupView.m */,
-				9794BE7F1BFB9BCE00617CCA /* BEMSimpleLineGraphView.h */,
-				9794BE801BFB9BCE00617CCA /* BEMSimpleLineGraphView.m */,
-				9794BE871BFB9BCE00617CCA /* Support Files */,
+				977693111C08E61A00000B7D /* BEMAverageLine.h */,
+				977693121C08E61A00000B7D /* BEMAverageLine.m */,
+				977693131C08E61A00000B7D /* BEMCircle.h */,
+				977693141C08E61A00000B7D /* BEMCircle.m */,
+				977693151C08E61A00000B7D /* BEMLine.h */,
+				977693161C08E61A00000B7D /* BEMLine.m */,
+				977693171C08E61A00000B7D /* BEMPermanentPopupView.h */,
+				977693181C08E61A00000B7D /* BEMPermanentPopupView.m */,
+				977693191C08E61A00000B7D /* BEMSimpleLineGraphView.h */,
+				9776931A1C08E61A00000B7D /* BEMSimpleLineGraphView.m */,
+				977693211C08E61A00000B7D /* Support Files */,
 			);
 			name = BEMSimpleLineGraph;
 			path = Pods/BEMSimpleLineGraph;
@@ -297,6 +328,12 @@
 			mainGroup = 2EA669761BC3453300364B08;
 			productRefGroup = 2EA669801BC3453300364B08 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 975884811C0932920014FE61 /* Products */;
+					ProjectRef = 9776932B1C08E6ED00000B7D /* GaugeKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2EA6697E1BC3453300364B08 /* Hexoplex */,
@@ -305,6 +342,23 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		975884861C0932920014FE61 /* GaugeKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GaugeKit.framework;
+			remoteRef = 975884851C0932920014FE61 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		975884881C0932920014FE61 /* GaugeKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GaugeKitTests.xctest;
+			remoteRef = 975884871C0932920014FE61 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2EA6697D1BC3453300364B08 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -312,7 +366,8 @@
 			files = (
 				2EA6698A1BC3453300364B08 /* Main.storyboard in Resources */,
 				2EA6698F1BC3453300364B08 /* LaunchScreen.xib in Resources */,
-				9794BE901BFB9BCE00617CCA /* Info.plist in Resources */,
+				977693281C08E61A00000B7D /* BEMSimpleLineGraph.xcconfig in Resources */,
+				9776932A1C08E61A00000B7D /* Info.plist in Resources */,
 				2EA6698C1BC3453300364B08 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,19 +434,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9794BE8B1BFB9BCE00617CCA /* BEMLine.m in Sources */,
+				977693251C08E61A00000B7D /* BEMLine.m in Sources */,
 				9794BE921BFBB31D00617CCA /* HeartHistory.m in Sources */,
-				9794BE8A1BFB9BCE00617CCA /* BEMCircle.m in Sources */,
+				977693271C08E61A00000B7D /* BEMSimpleLineGraphView.m in Sources */,
 				2EA669871BC3453300364B08 /* ViewController.swift in Sources */,
-				9794BE8C1BFB9BCE00617CCA /* BEMPermanentPopupView.m in Sources */,
+				977693261C08E61A00000B7D /* BEMPermanentPopupView.m in Sources */,
+				977693231C08E61A00000B7D /* BEMAverageLine.m in Sources */,
 				9701D8AB1BFAC917007CADF2 /* SwiftSha.swift in Sources */,
-				9794BE8D1BFB9BCE00617CCA /* BEMSimpleLineGraphView.m in Sources */,
 				2EA669851BC3453300364B08 /* AppDelegate.swift in Sources */,
 				EBA1DDEE1BD59BE700598C05 /* ViewController3.swift in Sources */,
 				97FF5BD81BF9593000377BCA /* HexoskinAPIRequest.swift in Sources */,
+				977693291C08E61A00000B7D /* BEMSimpleLineGraph-dummy.m in Sources */,
 				EBA1DDEC1BD5942700598C05 /* ViewController2.swift in Sources */,
-				9794BE891BFB9BCE00617CCA /* BEMAverageLine.m in Sources */,
-				9794BE8F1BFB9BCE00617CCA /* BEMSimpleLineGraph-dummy.m in Sources */,
+				977693351C09050800000B7D /* LungHistory.m in Sources */,
+				977693241C08E61A00000B7D /* BEMCircle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
