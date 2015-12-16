@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FC338B47A1EA43C7167C315F'
+               BlueprintIdentifier = '32181129E9D0E449B31D25E7'
                BlueprintName = 'ORStackView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ORStackView.framework'>

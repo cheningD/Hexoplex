@@ -8,6 +8,7 @@
 
 import UIKit
 import GaugeKit
+import Alamofire
 
 class ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
@@ -18,6 +19,47 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     @IBOutlet var heartTile: UIView!
 
     @IBOutlet var lungTile: UIView!
+    
+    var notificationSentHeart = 0
+    var notificationSentConHeart = 0
+    var notificationSentLung = 0
+    var notificationSentConLung = 0
+    
+    //push notifications
+    func sendRequest(notifaction:NSNotification){
+        let data = [
+            "To" : "+18144418654",
+            "From" : "+18148263789",
+            "Body" : "Yout friend is having an anxiety attack"
+        ]
+        
+        Alamofire.request(.POST, "https://AC8bd8d9a25ad4cc983c7fc9d28b3f9176:7964a41dde9ec33d7a7c580f7f5379d4@api.twilio.com/2010-04-01/Accounts/AC8bd8d9a25ad4cc983c7fc9d28b3f9176/Messages", parameters: data)
+            .responseJSON { response in
+                print(response.request)
+                print(response.response)
+                print(response.result)
+        }
+    }
+    
+    func sendPush(){
+        var localNotification = UILocalNotification()
+        localNotification.alertBody = "Are You Stressed? Try some Exercises"
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+    }
+    
+    func sendPushtoContact(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"sendRequest:", name: "actionOnePressed", object: nil)
+        
+        var localNotification = UILocalNotification()
+        
+        localNotification.category = "first_category"
+        localNotification.alertBody = "Would you like to contact someone?"
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+    }
 
     //Text below heart and lung gauges
     @IBOutlet weak var heartText: UILabel!
@@ -39,17 +81,30 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             let heartString = Int(rate)
             self.heartText.text = "\(heartString) BPM"
 
-            if ( rate > 150 && rate < 165)
+            if ( rate > 100 && rate < 165)
             {
                 self.heartTile.backgroundColor = UIColor.yellowColor()
+                if(self.notificationSentHeart == 0)
+                {
+                    self.notificationSentHeart = 1;
+                    self.sendPush()
+                }
             }
             else if (rate > 165)
             {
                 self.heartTile.backgroundColor = UIColor.redColor()
+                if(self.notificationSentConHeart == 0)
+                {
+                    self.notificationSentConHeart = 1;
+                    self.sendPushtoContact()
+
+                }
             }
             else
             {
                 self.heartTile.backgroundColor = UIColor.greenColor()
+                self.notificationSentConHeart = 0
+                self.notificationSentHeart = 0
             }
         })
     }
@@ -108,18 +163,29 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             if ( rate > 40 && rate < 45)
             {
                 self.lungTile.backgroundColor = UIColor.yellowColor()
+                if(self.notificationSentLung == 0)
+                {
+                    self.notificationSentLung = 1;
+                    self.sendPush()
+                }
             }
             else if (rate > 45)
             {
                 self.lungTile.backgroundColor = UIColor.redColor()
+                if(self.notificationSentConLung == 0)
+                {
+                    self.notificationSentConLung = 1;
+                    self.sendPushtoContact()
+                }
             }
             else
             {
                 self.lungTile.backgroundColor = UIColor.greenColor()
+                self.notificationSentLung = 0
+                self.notificationSentConLung = 0
             }
         })
     }
-
 
 
     //Navigation buttons at bottom of screen
@@ -151,6 +217,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         // Make request for vitals
         let myUser = HexoskinAPIRequest(username: "cdduker@gmail.com", password: "r33ltime")
         myUser.getRealtimeData(displayRealtimeHeartRate, lungCompletion: displayRealtimeLungRate)
+        
     }
 
     override func didReceiveMemoryWarning() {

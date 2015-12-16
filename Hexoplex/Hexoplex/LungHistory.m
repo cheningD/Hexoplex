@@ -24,6 +24,8 @@
 
 @implementation LungHistory
 
+int dataSetLung[20] = {12, 14, 26, 20, 18, 15, 28, 12, 15, 17, 14, 27, 12, 13, 20, 22, 30, 12, 20, 18};
+
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
@@ -54,6 +56,7 @@
     self.myGraph.enableReferenceYAxisLines = YES;
     self.myGraph.enableReferenceAxisFrame = YES;
     self.myGraph.enableBezierCurve = YES;
+    self.myGraph.alwaysDisplayPopUpLabels = YES;
     
     // Draw an average line
     self.myGraph.averageLine.enableAverageLine = YES;
@@ -97,8 +100,8 @@
     BOOL showNullValue = true;
     
     // Add objects to the array based on the stepper value
-    for (int i = 0; i < 9; i++) {
-        [self.arrayOfValues addObject:@([self getRandomFloat])]; // Random values for the graph
+    for (int i = 0; i < 20; i++) {
+        [self.arrayOfValues addObject:@(dataSetLung[i])]; // Random values for the graph
         if (i == 0) {
             [self.arrayOfDates addObject:baseDate]; // Dates for the X-Axis of the graph
         } else if (showNullValue && i == 4) {
@@ -150,6 +153,11 @@
 
 #pragma mark - SimpleLineGraph Delegate
 
+- (BOOL)lineGraph:(BEMSimpleLineGraphView *)graph alwaysDisplayPopUpAtIndex:(CGFloat)index {
+    if (index == 2 || index == 6 ||index == 11 || index == 16) return YES;
+    else return NO;
+}
+
 - (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
     return 2;
 }
@@ -190,7 +198,7 @@
  } */
 
 - (NSString *)popUpSuffixForlineGraph:(BEMSimpleLineGraphView *)graph {
-    return @" people";
+    return @" Panic Attack";
 }
 
 //- (NSString *)popUpPrefixForlineGraph:(BEMSimpleLineGraphView *)graph {

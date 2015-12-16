@@ -144,7 +144,7 @@ class HexoskinAPIRequest : NSObject {
                 self.realtimeLungRateGaugueUpdateFunc(lungRateNow)
                 //Prepare the next request
                 var newStartTime = heartDataArr[lastIndexHeart][0] as! Int
-                newStartTime++
+                //newStartTime++
                 let newEndTime:Int = newStartTime + ( 24 * 60 * 60 * 256)
                 self.url = "https://api.hexoskin.com/api/data/?record=\(self.realtimeRecordId)"
                     + "&datatype=\(self.hxDatatype.heartRate),"

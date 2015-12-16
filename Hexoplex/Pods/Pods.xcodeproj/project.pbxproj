@@ -343,7 +343,6 @@
 		E3449B89EE1370ED7AFDA8D648FB59DF /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
 		E46C256DF784EA7429BC27567F927AEE /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		E8479F80CADDFA3207C8C4F3D8FDCD75 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
-		EB28CAA41C1E50CE0062BFA3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../../../../../HEXOPLEX/Hexoplex/Hexoplex/Pods/Target Support Files/Alamofire/Info.plist"; sourceTree = "<group>"; };
 		EB6F67D207884D2887BFC08BCAA4E2A9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB76721CD984A35FA3BE6C1105EB513F /* FLKAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLKAutoLayout.xcconfig; sourceTree = "<group>"; };
 		EEDEE3DFE968A5C8D0887F8E096B488D /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
@@ -353,6 +352,7 @@
 		F59FB7071E0535248D9E60652761BF7C /* UIView+FLKAutoLayoutDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayoutDebug.h"; path = "FLKAutoLayout/UIView+FLKAutoLayoutDebug.h"; sourceTree = "<group>"; };
 		F6D75055DA435A787BB01D60B20316A6 /* GaugeCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GaugeCircle.swift; path = GaugeKit/GaugeCircle.swift; sourceTree = "<group>"; };
 		F6FD2E55285F4F5EAFA27DB5AC43D2D6 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		F7690CDE586AD1416792814102942150 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7DF26D3AE0136EB9639726E626BB0A6 /* Pods-Hexoplex-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Hexoplex-umbrella.h"; sourceTree = "<group>"; };
 		F9E2404342F6577076E8250E24D0B4C5 /* GaugeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GaugeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAEB859D9D1855BFCDBACCDD9CDD329 /* ORStackView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ORStackView.modulemap; sourceTree = "<group>"; };
@@ -452,7 +452,7 @@
 				B0653B8920648A94EEE3339F57F7F902 /* Alamofire-dummy.m */,
 				BE71FEB3E4A8C1FC2886CC15EFCB84E8 /* Alamofire-prefix.pch */,
 				BD1142432C3E6A518762F122B8DD429C /* Alamofire-umbrella.h */,
-				EB28CAA41C1E50CE0062BFA3 /* Info.plist */,
+				F7690CDE586AD1416792814102942150 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
@@ -1351,7 +1351,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 558F18A0F263531DA48145559A6AA47C /* AFNetworking.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1666,7 +1665,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 558F18A0F263531DA48145559A6AA47C /* AFNetworking.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

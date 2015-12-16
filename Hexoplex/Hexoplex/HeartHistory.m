@@ -15,6 +15,8 @@
 
 @implementation HeartHistory
 
+int dataSet[20] = {60, 62, 220, 65, 70, 90, 230, 63, 72, 97, 65, 225, 100, 55, 42, 95, 230, 67, 82, 60};
+
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
@@ -45,6 +47,7 @@
     self.myGraph.enableReferenceYAxisLines = YES;
     self.myGraph.enableReferenceAxisFrame = YES;
     self.myGraph.enableBezierCurve = YES;
+    self.myGraph.alwaysDisplayPopUpLabels = YES;
     
     // Draw an average line
     self.myGraph.averageLine.enableAverageLine = YES;
@@ -88,8 +91,8 @@
     BOOL showNullValue = true;
     
     // Add objects to the array based on the stepper value
-    for (int i = 0; i < 9; i++) {
-        [self.arrayOfValues addObject:@([self getRandomFloat])]; // Random values for the graph
+    for (int i = 0; i < 20; i++) {
+        [self.arrayOfValues addObject:@(dataSet[i])]; // Random values for the graph
         if (i == 0) {
             [self.arrayOfDates addObject:baseDate]; // Dates for the X-Axis of the graph
         } else if (showNullValue && i == 4) {
@@ -151,6 +154,11 @@
     return [label stringByReplacingOccurrencesOfString:@" " withString:@"\n"];
 }
 
+- (BOOL)lineGraph:(BEMSimpleLineGraphView *)graph alwaysDisplayPopUpAtIndex:(CGFloat)index {
+    if (index == 2 || index == 6 ||index == 11 || index == 16) return YES;
+    else return NO;
+}
+
 - (void)lineGraph:(BEMSimpleLineGraphView *)graph didTouchGraphWithClosestIndex:(NSInteger)index {
     self.labelValues.text = [NSString stringWithFormat:@"%@", [self.arrayOfValues objectAtIndex:index]];
     self.labelDates.text = [NSString stringWithFormat:@"in %@", [self labelForDateAtIndex:index]];
@@ -181,7 +189,7 @@
  } */
 
 - (NSString *)popUpSuffixForlineGraph:(BEMSimpleLineGraphView *)graph {
-    return @" panic attack";
+    return @" Panic Attack";
 }
 
 //- (NSString *)popUpPrefixForlineGraph:(BEMSimpleLineGraphView *)graph {
