@@ -16,3 +16,6 @@
 
 #import <CommonCrypto/CommonHMAC.h>
 #import "BEMSimpleLineGraphView.h"
+#import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
+#import <Bolts/Bolts.h>

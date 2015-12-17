@@ -13,6 +13,8 @@ import Alamofire
 class ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
 
+    @IBOutlet var heartImage: UIButton!
+    @IBOutlet var breathImage: UIButton!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var paddinglabel: UILabel!
 

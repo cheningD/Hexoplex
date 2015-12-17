@@ -19,6 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        // [Optional] Power your app with Local Datastore. For more info, go to
+        // https://parse.com/docs/ios/guide#local-datastore
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("YoWoPBTLgLUCwGqcO8U1L6QAWUodiRmLKiOA7Gl2",
+            clientKey: "EBGkNWD4huGXpmPPM61NtjuuCq7gbPS1rcpKnpbJ")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
         var firstAction:UIMutableUserNotificationAction = UIMutableUserNotificationAction()
         firstAction.identifier = "Accept"
         firstAction.title = "Accept"
